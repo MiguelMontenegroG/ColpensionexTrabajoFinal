@@ -1,0 +1,14 @@
+Nombre,Apellido,Celular,ID,Correo,ListaNegra,PrePensionado,InstitucionPublica,NombreInstitucion,ObservacionesDisciplinarias,TieneFamiliaPolicia,TieneHijosInpec,Condecoracion,PaisNacimiento,CiudadNacimiento,Edad,FondoPension,SemanasCotizadas,FondoExtranjero
+Juan,Pérez,3001234567,123456789,juan.perez@example.com,Sí,No,Sí,Mininterior,Sí,No,No,No,Colombia,Bogotá,45,Provenir,600,No
+Maria,Gomez,3109876543,987654321,maria.gomez@example.com,No,Sí,No,,No,No,No,No,Colombia,Medellín,50,Protección,580,No
+Carlos,Sánchez,3201239876,456789123,carlos.sanchez@example.com,No,No,Sí,Policía,No,Sí,No,No,Colombia,Cali,25,Old Mutual,90,No
+Ana,López,3009871234,678912345,ana.lopez@example.com,No,No,Sí,Minsalud,Sí,No,No,No,Kazajistán,Almatý,40,Colfondos,200,No
+Luis,Martínez,3112345678,345678912,luis.martinez@example.com,No,No,No,,No,No,No,No,Colombia,Bucaramanga,60,Colfondos,310,No
+Carolina,Díaz,3123456789,567890123,carolina.diaz@example.com,No,No,Sí,Inpec,No,No,Sí,No,Colombia,Bogotá,35,Protección,400,No
+José,Rodríguez,3134567890,678901234,jose.rodriguez@example.com,No,No,Sí,Armada,No,No,No,Sí,Colombia,Cartagena,55,Provenir,850,No
+Lucía,Mejía,3145678901,789012345,lucia.mejia@example.com,No,No,No,,No,No,No,No,Argentina,Buenos Aires,28,Old Mutual,110,No
+Pedro,García,3156789012,890123456,pedro.garcia@example.com,No,No,Sí,Policía,No,Sí,No,No,Colombia,Medellín,18,Protección,200,No
+Andrea,Ramírez,3167890123,901234567,andrea.ramirez@example.com,No,No,Sí,Minsalud,No,No,No,No,Colombia,Cali,32,Colfondos,250,No
+Samuel,Ortiz,3178901234,123456790,samuel.ortiz@example.com,No,No,No,,No,No,No,No,Tayikistán,Dushanbe,45,Provenir,100,No
+Marta,Velázquez,3189012345,234567891,marta.velazquez@example.com,No,No,No,,No,No,No,No,Colombia,Bogotá,57,Colfondos,290,No
+Ricardo,Blanco,3190123456,345678912,ricardo.blanco@example.com,No,No,Sí,Policía,No,Sí,No,No,Colombia,Barranquilla,19,Protección,150,No
