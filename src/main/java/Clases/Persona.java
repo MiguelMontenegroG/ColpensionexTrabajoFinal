@@ -48,7 +48,6 @@ public class Persona {
         this.fondoExtranjero = fondoExtranjero;
     }
 
-    // Método para evaluar los criterios de aceptación, rechazo, etc.
     public String evaluarCriterios() {
         // 1. Verificar si ha estado en lista negra
         if (listaNegra) {
