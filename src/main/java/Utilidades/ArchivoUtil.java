@@ -13,10 +13,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
 import java.util.Scanner;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class ArchivoUtil {
 
@@ -149,6 +157,94 @@ public class ArchivoUtil {
         decoder.close();
 
         return objeto;
+    }
+
+    public static String crearCapetaDia (String ruta) {
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd");
+        String folderName = "SolicitudesProcesadas_" + today.format(formatter);
+
+        File folder = new File(ruta, folderName);
+
+        if (!folder.exists()) {
+            if (folder.mkdirs()) {
+                System.out.println("Carpeta creada: " + folder.getAbsolutePath());
+            } else {
+                System.err.println("No se pudo crear la carpeta.");
+            }
+        } else {
+            System.out.println("La carpeta ya existe: " + folder.getAbsolutePath());
+        }
+
+        return folder.getAbsolutePath();
+    }
+
+    public static void moveCsvFiles(String sourceDir, String targetDir) {
+        File sourceFolder = new File(sourceDir);
+        File targetFolder = new File(targetDir);
+
+        if (!targetFolder.exists()) {
+            targetFolder.mkdirs();
+        }
+
+        File[] csvFiles = sourceFolder.listFiles((dir, name) -> name.endsWith(".csv"));
+
+        if (csvFiles == null || csvFiles.length == 0) {
+            System.out.println("No hay archivos CSV en la carpeta de origen.");
+            return;
+        }
+
+        for (File csvFile : csvFiles) {
+            Path sourcePath = csvFile.toPath();
+            Path targetPath = Paths.get(targetFolder.getAbsolutePath(), csvFile.getName());
+
+            try {
+                Files.move(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("Archivo movido: " + csvFile.getName());
+            } catch (IOException e) {
+                System.err.println("Error al mover el archivo " + csvFile.getName() + ": " + e.getMessage());
+            }
+        }
+    }
+
+    public static void comprimirCarpeta(String folderPath, String zipFilePath) {
+        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFilePath))) {
+            Path sourcePath = Paths.get(folderPath);
+
+            // Recorrer todos los archivos en la carpeta para agregarlos al zip
+            Files.walk(sourcePath).filter(path -> !Files.isDirectory(path)).forEach(path -> {
+                ZipEntry zipEntry = new ZipEntry(sourcePath.relativize(path).toString());
+                try {
+                    zos.putNextEntry(zipEntry);
+                    Files.copy(path, zos);
+                    zos.closeEntry();
+                } catch (IOException e) {
+                    System.err.println("Error al agregar archivo al ZIP: " + e.getMessage());
+                }
+            });
+            System.out.println("Carpeta comprimida en: " + zipFilePath);
+        } catch (IOException e) {
+            System.err.println("Error al crear el archivo ZIP: " + e.getMessage());
+        }
+    }
+
+    public static void comprimirCarpetaAyer(String baseDir) {
+        // Obtener la fecha del día anterior en formato yyyy_MM_dd
+        LocalDate yesterday = LocalDate.now().minusDays(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd");
+        String folderName = "SolicitudesProcesadas_" + yesterday.format(formatter);
+
+        // Definir la ruta de la carpeta y del archivo zip
+        String folderPath = Paths.get(baseDir, folderName).toString();
+        String zipFilePath = Paths.get(baseDir, folderName + ".zip").toString();
+
+        // Comprimir la carpeta si existe
+        File folder = new File(folderPath);
+        if (folder.exists() && folder.isDirectory()) {
+            comprimirCarpeta(folderPath, zipFilePath);
+        } else {
+            System.out.println("No existe la carpeta de ayer para comprimir.");
+        }
     }
 
 }
