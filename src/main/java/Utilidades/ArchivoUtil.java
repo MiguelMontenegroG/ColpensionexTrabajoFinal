@@ -26,7 +26,7 @@ import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-public class ArchivoUtil {
+public class  ArchivoUtil {
 
     /**
      * Permite leer un archivo desde una ruta específica mediante Scanner
