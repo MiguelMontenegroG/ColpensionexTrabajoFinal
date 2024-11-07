@@ -1,6 +1,7 @@
 package Clases;
 
 public class Persona {
+
     private String nombre;
     private String apellido;
     private String celular;
@@ -16,17 +17,19 @@ public class Persona {
     private boolean condecoracion;
     private String paisNacimiento;
     private String ciudadNacimiento;
+    private String ciudadResidencia;
     private int edad;
     private String fondoPension;
     private int semanasCotizadas;
     private boolean fondoExtranjero;
+    private Caracterizacion caracterizacion; // Este es un enum, no un booleano
 
+    // Constructor
     public Persona(String nombre, String apellido, String celular, String id, String correo,
-                   boolean listaNegra, boolean prePensionado, boolean institucionPublica,
-                   String nombreInstitucion, boolean observacionesDisciplinarias, boolean tieneFamiliaPolicia,
-                   boolean tieneHijosInpec, boolean condecoracion, String paisNacimiento,
-                   String ciudadNacimiento, int edad, String fondoPension, int semanasCotizadas,
-                   boolean fondoExtranjero) {
+                   boolean listaNegra, boolean prePensionado, boolean institucionPublica, String nombreInstitucion,
+                   boolean observacionesDisciplinarias, boolean tieneFamiliaPolicia, boolean tieneHijosInpec,
+                   boolean condecoracion, String paisNacimiento, String ciudadNacimiento, String ciudadResidencia,
+                   int edad, String fondoPension, int semanasCotizadas, boolean fondoExtranjero, Caracterizacion caracterizacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.celular = celular;
@@ -42,21 +45,25 @@ public class Persona {
         this.condecoracion = condecoracion;
         this.paisNacimiento = paisNacimiento;
         this.ciudadNacimiento = ciudadNacimiento;
+        this.ciudadResidencia = ciudadResidencia;
         this.edad = edad;
         this.fondoPension = fondoPension;
         this.semanasCotizadas = semanasCotizadas;
         this.fondoExtranjero = fondoExtranjero;
+        this.caracterizacion = caracterizacion; // Asignamos el valor del enum
     }
 
-    public String evaluarCriterios() {
+    public void evaluarCaracterizacion() {
         // 1. Verificar si ha estado en lista negra
         if (listaNegra) {
-            return "Rechazar";
+            this.caracterizacion = Caracterizacion.RECHAZADO;
+            return;
         }
 
         // 2. Verificar si es pre-pensionado
         if (prePensionado) {
-            return "Rechazar";
+            this.caracterizacion = Caracterizacion.RECHAZADO;
+            return;
         }
 
         // 3. Evaluar institución pública
@@ -66,33 +73,39 @@ public class Persona {
                 case "Minsalud":
                     if (observacionesDisciplinarias) {
                         listaNegra = true;
-                        return "Rechazar y agregar a la lista negra";
+                        this.caracterizacion = Caracterizacion.RECHAZADO;
+                    } else {
+                        this.caracterizacion = Caracterizacion.APROBADO;
                     }
-                    return "Aprobar";
+                    return;
 
                 case "Policía":
                     if (tieneFamiliaPolicia) {
                         if (edad < 18) {
-                            return "Procesar como civil";
+                            this.caracterizacion = Caracterizacion.INHABILITADO;
                         } else {
-                            return "Aprobar";
+                            this.caracterizacion = Caracterizacion.APROBADO;
                         }
+                    } else {
+                        this.caracterizacion = Caracterizacion.APROBADO;
                     }
-                    return "Aprobar";
+                    return;
 
                 case "Inpec":
                     if (tieneHijosInpec || condecoracion) {
-                        return "Aprobar";
+                        this.caracterizacion = Caracterizacion.APROBADO;
                     } else {
-                        return "Procesar como civil";
+                        this.caracterizacion = Caracterizacion.INHABILITADO;
                     }
+                    return;
 
                 case "Armada":
                     if (condecoracion) {
-                        return "Aprobar";
+                        this.caracterizacion = Caracterizacion.APROBADO;
                     } else {
-                        return "Procesar como civil";
+                        this.caracterizacion = Caracterizacion.INHABILITADO;
                     }
+                    return;
             }
         }
 
@@ -104,38 +117,59 @@ public class Persona {
 
         // 4. Verificar lugar de nacimiento
         if (ciudadEspecial || paisTerminaEnTan) {
-            return "Rechazar";
+            this.caracterizacion = Caracterizacion.RECHAZADO;
+            return;
         }
 
         // 5. Verificar edad
         if (edad > 55) {
-            return "Rechazar";
+            this.caracterizacion = Caracterizacion.RECHAZADO;
+            return;
         }
 
         // 6. Verificar fondo de pensión y semanas cotizadas
         switch (fondoPension) {
             case "Provenir":
-                if (semanasCotizadas > 800) return "Rechazar";
+                if (semanasCotizadas > 800) {
+                    this.caracterizacion = Caracterizacion.EMBARGADO;
+                    return;
+                }
                 break;
             case "Protección":
-                if (semanasCotizadas > 590) return "Rechazar";
+                if (semanasCotizadas > 590) {
+                    this.caracterizacion = Caracterizacion.EMBARGADO;
+                    return;
+                }
                 break;
             case "Colfondos":
-                if (semanasCotizadas > 300) return "Rechazar";
+                if (semanasCotizadas > 300) {
+                    this.caracterizacion = Caracterizacion.EMBARGADO;
+                    return;
+                }
                 break;
             case "Old Mutual":
-                if (semanasCotizadas > 100) return "Rechazar";
+                if (semanasCotizadas > 100) {
+                    this.caracterizacion = Caracterizacion.EMBARGADO;
+                    return;
+                }
                 break;
         }
 
         // 7. Verificar fondo extranjero
         if (fondoExtranjero) {
-            return "Aprobar";
+            this.caracterizacion = Caracterizacion.APROBADO;
+            return;
         }
 
         // Si no se cumplen las condiciones anteriores, aprobar
-        return "Aprobar";
+        this.caracterizacion = Caracterizacion.APROBADO;
     }
+
+    public Caracterizacion getCaracterizacion() {
+        return caracterizacion;
+    }
+
+    // Otros getters y setters omitidos para simplicidad
 
     public String getNombre() {
         return nombre;
@@ -287,5 +321,17 @@ public class Persona {
 
     public void setFondoExtranjero(boolean fondoExtranjero) {
         this.fondoExtranjero = fondoExtranjero;
+    }
+
+    public String getCiudadResidencia() {
+        return ciudadResidencia;
+    }
+
+    public void setCiudadResidencia(String ciudadResidencia) {
+        this.ciudadResidencia = ciudadResidencia;
+    }
+
+    public void setCaracterizacion(Caracterizacion caracterizacion) {
+        this.caracterizacion = caracterizacion;
     }
 }

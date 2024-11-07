@@ -1,6 +1,7 @@
 package Utilidades;
 
 import Clases.Persona;
+import Clases.Caracterizacion;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -44,10 +45,14 @@ public class CSVReader {
                         valores[12].equalsIgnoreCase("Sí"),               // Condecoracion
                         valores[13],                                      // PaisNacimiento
                         valores[14],                                      // CiudadNacimiento
-                        Integer.parseInt(valores[15]),                    // Edad
-                        valores[16],                                      // FondoPension
-                        Integer.parseInt(valores[17]),                    // SemanasCotizadas
-                        valores[18].equalsIgnoreCase("Sí")                // FondoExtranjero
+                        valores[15],                                      // CiudadResidencia
+                        Integer.parseInt(valores[16]),                    // Edad
+                        valores[17],                                      // FondoPension
+                        Integer.parseInt(valores[18]),                    // SemanasCotizadas
+                        valores[19].equalsIgnoreCase("Sí"),               // FondoExtranjero
+                        // Asignar la caracterización basada en el último campo
+                        // Ahora usando el método valueOf para convertir a Caracterizacion
+                        parseCaracterizacion(valores[20]) // Caracterizacion
                 );
 
                 personas.add(persona);
@@ -57,5 +62,14 @@ public class CSVReader {
         }
 
         return personas;
+    }
+
+    // Método para manejar la conversión de String a Caracterizacion
+    private Caracterizacion parseCaracterizacion(String valor) {
+        try {
+            return Caracterizacion.valueOf(valor.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            return Caracterizacion.NULL;  // Retorna NULL si no es un valor válido
+        }
     }
 }

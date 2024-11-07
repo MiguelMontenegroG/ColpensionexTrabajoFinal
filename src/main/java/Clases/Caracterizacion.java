@@ -4,5 +4,6 @@ public enum Caracterizacion {
     APROBADO,
     RECHAZADO,
     INHABILITADO,
-    EMBARGADO;
+    EMBARGADO,
+    NULL;
 }
