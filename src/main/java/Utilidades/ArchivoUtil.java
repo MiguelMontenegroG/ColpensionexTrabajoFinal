@@ -13,12 +13,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
@@ -244,6 +242,62 @@ public class  ArchivoUtil {
             comprimirCarpeta(folderPath, zipFilePath);
         } else {
             System.out.println("No existe la carpeta de ayer para comprimir.");
+        }
+    }
+
+    public static void moverSolicitudes(String carpetaOrigen, String carpetaDestino) {
+        Path carpetaEntrantes = Paths.get(carpetaOrigen);
+        Path carpetaProcesamiento = Paths.get(carpetaDestino);
+
+        try {
+            // Crear la carpeta de procesamiento si no existe
+            if (Files.notExists(carpetaProcesamiento)) {
+                Files.createDirectories(carpetaProcesamiento);
+            }
+
+            // Listar archivos en "SolicitudesEntrantes" y moverlos
+            DirectoryStream<Path> stream = Files.newDirectoryStream(carpetaEntrantes);
+
+            for (Path archivo : stream) {
+                Path destino = carpetaProcesamiento.resolve(archivo.getFileName());
+                Files.move(archivo, destino, StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("Archivo movido: " + archivo.getFileName());
+            }
+        } catch (IOException e) {
+            System.err.println("Error al mover los archivos: " + e.getMessage());
+        }
+    }
+
+    public static int verificarColumnasCSV(String archivoCSV) {
+        int cantidadColumnas = 0;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoCSV))) {
+            String linea = br.readLine(); // Leer la primera línea (encabezados)
+            if (linea != null) {
+                // Contar las columnas separadas por coma (asumiendo formato CSV estándar)
+                String[] columnas = linea.split(",");
+                cantidadColumnas = columnas.length;
+                System.out.println("Cantidad de columnas: " + cantidadColumnas);
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo CSV: " + e.getMessage());
+        }
+
+        return cantidadColumnas;
+    }
+
+    public static boolean verificarFecha(String fecha) {
+        // Definir el formato de fecha esperado
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        try {
+            // Intentar parsear la fecha con el formato especificado
+            LocalDate.parse(fecha, formatter);
+            System.out.println("La fecha es válida: " + fecha);
+            return true;  // Si no lanza excepción, es una fecha válida
+        } catch (DateTimeParseException e) {
+            System.out.println("Fecha no válida: " + fecha);
+            return false;  // Si ocurre una excepción, la fecha es inválida
         }
     }
 
