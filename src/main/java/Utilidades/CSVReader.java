@@ -14,62 +14,64 @@ public class CSVReader {
     private String rutaArchivo;
     private String separador;
 
+    // Constructor
     public CSVReader(String rutaArchivo, String separador) {
         this.rutaArchivo = rutaArchivo;
         this.separador = separador;
     }
 
+    // Método para leer el archivo CSV y convertirlo en una lista de objetos Persona
     public List<Persona> leerArchivo() {
         List<Persona> personas = new ArrayList<>();
-
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
-            br.readLine(); // Saltar la primera línea (cabecera)
+            // Leer línea por línea
             while ((linea = br.readLine()) != null) {
+                // Saltar la cabecera
+                if (linea.startsWith("Nombre")) {
+                    continue;
+                }
+
+                // Separar los valores de la línea por el separador
                 String[] valores = linea.split(separador);
 
-                // Parsear y asignar los valores correctamente
-                Persona persona = new Persona(
-                        valores[0],                                       // Nombre
-                        valores[1],                                       // Apellido
-                        valores[2],                                       // Celular
-                        valores[3],                                       // ID o Cédula
-                        valores[4],                                       // Correo
-                        valores[5].equalsIgnoreCase("Sí"),                // ListaNegra
-                        valores[6].equalsIgnoreCase("Sí"),                // PrePensionado
-                        valores[7].equalsIgnoreCase("Sí"),                // InstitucionPublica
-                        valores[8],                                       // NombreInstitucion
-                        valores[9].equalsIgnoreCase("Sí"),                // ObservacionesDisciplinarias
-                        valores[10].equalsIgnoreCase("Sí"),               // TieneFamiliaPolicia
-                        valores[11].equalsIgnoreCase("Sí"),               // TieneHijosInpec
-                        valores[12].equalsIgnoreCase("Sí"),               // Condecoracion
-                        valores[13],                                      // PaisNacimiento
-                        valores[14],                                      // CiudadNacimiento
-                        valores[15],                                      // CiudadResidencia
-                        Integer.parseInt(valores[16]),                    // Edad
-                        valores[17],                                      // FondoPension
-                        Integer.parseInt(valores[18]),                    // SemanasCotizadas
-                        valores[19].equalsIgnoreCase("Sí"),               // FondoExtranjero
-                        // Asignar la caracterización basada en el último campo
-                        // Ahora usando el método valueOf para convertir a Caracterizacion
-                        parseCaracterizacion(valores[20]) // Caracterizacion
-                );
+                // Asignar cada valor a las variables correspondientes
+                String nombre = valores[0];
+                String apellido = valores[1];
+                String fecha = valores[2];
+                String celular = valores[3];
+                String id = valores[4];
+                String correo = valores[5];
+                boolean listaNegra = valores[6].equalsIgnoreCase("Sí");
+                boolean prePensionado = valores[7].equalsIgnoreCase("Sí");
+                boolean institucionPublica = valores[8].equalsIgnoreCase("Sí");
+                String nombreInstitucion = valores[9];
+                boolean observacionesDisciplinarias = valores[10].equalsIgnoreCase("Sí");
+                boolean tieneFamiliaPolicia = valores[11].equalsIgnoreCase("Sí");
+                boolean tieneHijosInpec = valores[12].equalsIgnoreCase("Sí");
+                boolean condecoracion = valores[13].equalsIgnoreCase("Sí");
+                String paisNacimiento = valores[14];
+                String ciudadNacimiento = valores[15];
+                String ciudadResidencia = valores[16];
+                int edad = Integer.parseInt(valores[17]);
+                String fechaNacimiento = valores[18];
+                String fondoPension = valores[19];
+                int semanasCotizadas = Integer.parseInt(valores[20]);
+                boolean fondoExtranjero = valores[21].equalsIgnoreCase("Sí");
 
+                // Obtener la caracterización desde el archivo CSV
+                Caracterizacion caracterizacion = Caracterizacion.valueOf(valores[22].toUpperCase());
+
+                // Crear el objeto Persona y añadirlo a la lista
+                Persona persona = new Persona(nombre, apellido, fecha, celular, id, correo, listaNegra, prePensionado, institucionPublica,
+                        nombreInstitucion, observacionesDisciplinarias, tieneFamiliaPolicia, tieneHijosInpec, condecoracion,
+                        paisNacimiento, ciudadNacimiento, ciudadResidencia, edad, fechaNacimiento, fondoPension, semanasCotizadas,
+                        fondoExtranjero, caracterizacion);
                 personas.add(persona);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return personas;
-    }
-
-    // Método para manejar la conversión de String a Caracterizacion
-    private Caracterizacion parseCaracterizacion(String valor) {
-        try {
-            return Caracterizacion.valueOf(valor.toUpperCase());
-        } catch (IllegalArgumentException e) {
-            return Caracterizacion.NULL;  // Retorna NULL si no es un valor válido
-        }
     }
 }

@@ -1,9 +1,14 @@
 package Clases;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.Period;
+
 public class Persona {
 
     private String nombre;
     private String apellido;
+    private String fecha;
     private String celular;
     private String id;
     private String correo;
@@ -19,19 +24,21 @@ public class Persona {
     private String ciudadNacimiento;
     private String ciudadResidencia;
     private int edad;
+    private String fechaNacimiento;
     private String fondoPension;
     private int semanasCotizadas;
     private boolean fondoExtranjero;
     private Caracterizacion caracterizacion; // Este es un enum, no un booleano
 
     // Constructor
-    public Persona(String nombre, String apellido, String celular, String id, String correo,
+    public Persona(String nombre, String apellido, String fecha,String celular, String id, String correo,
                    boolean listaNegra, boolean prePensionado, boolean institucionPublica, String nombreInstitucion,
                    boolean observacionesDisciplinarias, boolean tieneFamiliaPolicia, boolean tieneHijosInpec,
                    boolean condecoracion, String paisNacimiento, String ciudadNacimiento, String ciudadResidencia,
-                   int edad, String fondoPension, int semanasCotizadas, boolean fondoExtranjero, Caracterizacion caracterizacion) {
+                   int edad, String fechaNacimiento, String fondoPension, int semanasCotizadas, boolean fondoExtranjero, Caracterizacion caracterizacion) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.fecha = fecha;
         this.celular = celular;
         this.id = id;
         this.correo = correo;
@@ -47,6 +54,7 @@ public class Persona {
         this.ciudadNacimiento = ciudadNacimiento;
         this.ciudadResidencia = ciudadResidencia;
         this.edad = edad;
+        this.fechaNacimiento = fechaNacimiento;
         this.fondoPension = fondoPension;
         this.semanasCotizadas = semanasCotizadas;
         this.fondoExtranjero = fondoExtranjero;
@@ -163,6 +171,13 @@ public class Persona {
 
         // Si no se cumplen las condiciones anteriores, aprobar
         this.caracterizacion = Caracterizacion.APROBADO;
+
+        int edadCalculada = calcularEdad();
+        if (edadCalculada != this.edad) {
+            this.caracterizacion = Caracterizacion.RECHAZADO;  // Si la edad no coincide, rechazamos la persona
+        } else {
+            this.caracterizacion = Caracterizacion.APROBADO;
+        }
     }
 
     public Caracterizacion getCaracterizacion() {
@@ -334,4 +349,30 @@ public class Persona {
     public void setCaracterizacion(Caracterizacion caracterizacion) {
         this.caracterizacion = caracterizacion;
     }
+
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    // Método para calcular la edad desde la fecha de nacimiento
+    public int calcularEdad() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaNacimientoLocal = LocalDate.parse(this.fechaNacimiento, formatter);
+        LocalDate fechaHoy = LocalDate.now();
+        Period periodo = Period.between(fechaNacimientoLocal, fechaHoy);
+        return periodo.getYears();
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 }
+

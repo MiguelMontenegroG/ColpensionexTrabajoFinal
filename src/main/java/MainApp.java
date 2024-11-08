@@ -1,20 +1,45 @@
 import Utilidades.CSVReader;
 import Clases.Persona;
 import Utilidades.VerificarCiudad;
+import Utilidades.ArchivoUtil;
 
 import java.io.IOException;
 import java.util.List;
 
 public class MainApp {
     public static void main(String[] args) {
-        String rutaCSV = "ruta/al/archivo.csv";
+        String rutaCSV = "src/main/resources/SolicitudesEnProcesamiento/CSVEjemplo2.csv";
         String rutaCiudades = "src/main/resources/BaseDeDatos/paises/colombia/municipio.csv";
         String separador = ",";
+
+        // Verificar el número de columnas en el archivo CSV
+        int cantidadColumnas = ArchivoUtil.verificarColumnasCSV(rutaCSV);
+
+        // Comprobar si el número de columnas es el correcto (por ejemplo, 20)
+        if (cantidadColumnas != 23) {
+            System.out.println("Error: El archivo CSV tiene un número incorrecto de columnas.");
+            return;  // Salir si el número de columnas no es correcto
+        }
 
         try {
             // Leer personas desde el archivo CSV
             CSVReader lectorCSV = new CSVReader(rutaCSV, separador);
             List<Persona> personas = lectorCSV.leerArchivo();
+
+            // Verificar el formato de las fechas en el archivo CSV
+            boolean fechasCorrectas = true;
+            for (Persona persona : personas) {
+                String fecha = persona.getFecha();
+                if (!ArchivoUtil.verificarFecha(fecha)) {
+                    fechasCorrectas = false;
+                    break;
+                }
+            }
+
+            if (!fechasCorrectas) {
+                System.out.println("Error: Alguna de las fechas tiene un formato incorrecto.");
+                return;  // Salir si alguna fecha tiene formato incorrecto
+            }
 
             // Crear el verificador de ciudad
             VerificarCiudad verificador = new VerificarCiudad(rutaCiudades);
@@ -43,8 +68,28 @@ public class MainApp {
     }
 
     public static void actualizarCaracterizacionCSV(String rutaCSV, Persona persona) {
-        // Implementar lógica para sobrescribir la fila correspondiente
-        // en el archivo CSV con la caracterización actualizada de la persona.
-        // (Aquí podría abrir el archivo en modo escritura y reemplazar la línea)
+        try {
+            // Leer el archivo CSV
+            List<String> lineas = ArchivoUtil.leerArchivoBufferedReader(rutaCSV);
+
+            // Encontrar y actualizar la línea de la persona correspondiente
+            for (int i = 0; i < lineas.size(); i++) {
+                String linea = lineas.get(i);
+                String[] datos = linea.split(",");
+
+                if (datos[4].equals(persona.getId())) {  // Compara el ID de la persona
+                    datos[22] = persona.getCaracterizacion().toString();  // Suponiendo que la caracterización es la columna 19
+
+                    lineas.set(i, String.join(",", datos));
+                    break;
+                }
+            }
+
+            // Escribir las líneas actualizadas de nuevo en el archivo
+            ArchivoUtil.escribirArchivoBufferedWriter(rutaCSV, lineas, false);  // false para sobrescribir el archivo
+
+        } catch (IOException e) {
+            System.err.println("Error al actualizar el archivo CSV: " + e.getMessage());
+        }
     }
 }
