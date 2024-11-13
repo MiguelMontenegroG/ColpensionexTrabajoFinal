@@ -92,4 +92,19 @@ public class MainApp {
             System.err.println("Error al actualizar el archivo CSV: " + e.getMessage());
         }
     }
+    /**
+     *      // Configuración inicial
+     *         LoggerConfig.getLogger();  // Inicializa el logger
+     *         DirectoryManager.crearDirectorios();  // Crea los directorios necesarios
+     *
+     *         // Inicia el proceso programado
+     *         SchedulerConfig scheduler = new SchedulerConfig();
+     *         scheduler.startScheduler();
+     *
+     *         System.out.println("Proceso iniciado correctamente.");
+     *
+     *         // Probar mover archivos (esto debe llamarse automáticamente cada hora)
+     *         SolicitudService solicitudService = new SolicitudService();
+     *         solicitudService.trasladarSolicitudes();
+     */
 }

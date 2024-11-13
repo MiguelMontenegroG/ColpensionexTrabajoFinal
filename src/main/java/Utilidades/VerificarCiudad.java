@@ -30,7 +30,7 @@ public class VerificarCiudad {
             // Verificar ciudad de nacimiento
             if (!ciudadesColombia.contains(persona.getCiudadNacimiento().toLowerCase())) {
                 System.out.println("Ciudad de nacimiento no válida para personas de Colombia.");
-                persona.setCiudadNacimiento(null); // O marca como no válida según requieras
+                persona.setCiudadNacimiento(null); // O marca como no válida según se requiera
             }
         } else {
             // Si no es de Colombia, establecer ciudad de residencia
