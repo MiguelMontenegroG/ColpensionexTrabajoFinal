@@ -27,18 +27,16 @@ public class VerificarCiudad {
 
     public void verificarCiudad(Persona persona) {
         if ("Colombia".equalsIgnoreCase(persona.getPaisNacimiento())) {
-            // Verificar ciudad de nacimiento
             if (!ciudadesColombia.contains(persona.getCiudadNacimiento().toLowerCase())) {
                 System.out.println("Ciudad de nacimiento no válida para personas de Colombia.");
-                persona.setCiudadNacimiento(null); // O marca como no válida según se requiera
+                persona.setCiudadNacimiento(null);
             }
         } else {
-            // Si no es de Colombia, establecer ciudad de residencia
-            persona.setCiudadNacimiento(null); // Campo de nacimiento queda como null
+            persona.setCiudadNacimiento(null);
             String ciudadResidencia = persona.getCiudadResidencia();
             if (ciudadResidencia == null || !ciudadesColombia.contains(ciudadResidencia.toLowerCase())) {
                 System.out.println("Ciudad de residencia no válida.");
-                persona.setCiudadResidencia(null); // O marcar como no válida
+                persona.setCiudadResidencia(null);
             }
         }
     }
