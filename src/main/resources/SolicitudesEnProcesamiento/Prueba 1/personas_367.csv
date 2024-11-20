@@ -1,0 +1,101 @@
+Nombre,Apellido,Fecha,Celular,ID,Correo,ListaNegra,PrePensionado,InstitucionPublica,NombreInstitucion,ObservacionesDisciplinarias,TieneFamiliaPolicia,TieneHijosInpec,Condecoracion,PaisNacimiento,CiudadNacimiento,CiudadResidencia,Edad,FechaNacimiento,FondoPension,SemanasCotizadas,FondoExtranjero,Caracterizacion
+Kelly,Martinez,2004-03-14,(231)929-9542,4248945192,angelicabridges@example.net,2022-04-24,No,Sí,Minsalud,Sí,Sí,No,Sí,Colombia,CIENAGA DE ORO,ALBAN,39,1987-10-22,Provenir,171,No,RECHAZADO
+Henry,Johnson,2010-03-21,(490)275-6746x53455,2324555938,cmorgan@example.com,NULL,Sí,Sí,Policía,Sí,No,No,Sí,Colombia,MONTERREY,SAN MARCOS,22,1961-11-05,Protección,870,No,RECHAZADO
+Rachel,Pollard,2021-11-01,846-773-6485x62194,5173395101,holtmichael@example.org,NULL,Sí,Sí,Policía,No,Sí,Sí,Sí,Colombia,PAJARITO,FLANDES,22,1995-12-08,N/A,625,Sí,RECHAZADO
+Lisa,Dalton,2001-10-25,892.322.0969x0167,1557986500,jeremy66@example.org,NULL,Sí,Sí,Armada,No,Sí,Sí,Sí,Colombia,Taraz�,PUERTO CARREÑO,70,2005-09-23,Old Mutual,296,No,RECHAZADO
+Melissa,Salazar,2003-08-21,001-908-285-3823,5356816166,russell91@example.org,2022-10-08,No,Sí,Policía,No,Sí,No,No,Colombia,LA CAPILLA,Valpara�so,58,2004-01-24,Provenir,212,Sí,APROBADO
+Madison,Perez,2004-01-28,287.918.0987x3630,3936685508,lucaspowell@example.org,2020-01-05,No,No,Mininterior,No,Sí,Sí,No,Uzbekistán,no aplica,no aplica,65,1988-05-06,N/A,460,Sí,RECHAZADO
+Andrew,Thomas,2010-11-22,(917)497-9769,1609641982,juanmiller@example.com,NULL,No,Sí,Policía,No,No,No,Sí,Colombia,ROBERTO PAYAN,SIMACOTA,49,2002-08-07,Provenir,729,No,APROBADO
+Daniel,Diaz,2013-07-11,(217)324-9479,3019032185,robertdavidson@example.com,2023-05-26,Sí,Sí,Inpec,No,No,No,No,Colombia,Arboletes,ALTO BAUDO,40,1954-06-11,N/A,543,No,RECHAZADO
+Mary,Matthews,2001-04-14,001-298-363-2952x0551,9059760343,nmiller@example.net,NULL,No,No,Inpec,No,No,Sí,No,Colombia,GUATEQUE,OTANCHE,19,1980-03-04,Old Mutual,548,No,EMBARGADO
+Jessica,Ellis,2003-01-12,650.297.8756x0891,9587247953,twright@example.net,2021-09-14,Sí,No,Inpec,No,Sí,No,Sí,Colombia,ARAUCA,CANDELARIA,52,1985-08-12,N/A,502,Sí,RECHAZADO
+Michelle,Hatfield,2015-04-01,353.493.1562x2134,9073897669,deanlaura@example.org,NULL,Sí,Sí,Inpec,Sí,No,Sí,Sí,Colombia,COLON,PUERTO ASIS,63,2002-11-29,Old Mutual,560,Sí,RECHAZADO
+Jeffrey,Young,2022-11-20,(394)694-6487,5288449382,edwardsjennifer@example.org,2021-01-29,Sí,No,N/A,No,No,Sí,No,Colombia,POLONUEVO,DIBULLA,31,1969-09-15,Protección,81,Sí,RECHAZADO
+David,Patel,2004-06-14,001-222-823-5375x136,5141335229,vlane@example.org,2024-01-26,No,Sí,Policía,No,Sí,No,Sí,Colombia,BUENOS AIRES,TIPACOQUE,33,2006-10-29,Colfondos,747,No,APROBADO
+David,Perry,2012-07-31,(765)865-6986,1676052940,ganderson@example.net,NULL,Sí,No,Inpec,Sí,Sí,No,Sí,Colombia,SACAMA,CUCUNUBA,43,1973-07-10,Provenir,1200,No,RECHAZADO
+Katherine,Larson,2011-10-20,+1-295-753-5242,1633939380,jamesanderson@example.org,NULL,No,No,Minsalud,Sí,No,No,Sí,Colombia,IQUIRA,RECETOR,46,2005-01-24,Provenir,965,Sí,EMBARGADO
+Michael,Gonzalez,2019-06-14,+1-619-284-3134x6598,6752145851,peterpeterson@example.com,2024-06-04,No,Sí,Minsalud,No,Sí,Sí,Sí,Colombia,NOROSI,TRUJILLO,37,1978-12-18,Old Mutual,320,Sí,RECHAZADO
+William,Frazier,2017-10-21,604-457-0821x31153,1448931924,kkennedy@example.net,NULL,Sí,Sí,Inpec,No,Sí,Sí,Sí,Colombia,UNION PANAMERICANA,CUMBITARA,41,1989-03-18,Old Mutual,392,No,RECHAZADO
+David,Johnson,2000-03-25,881.736.8827x8269,9550394699,larrychang@example.org,NULL,No,Sí,Policía,No,No,Sí,No,Colombia,C�ceres,SAMPUES,49,1974-06-03,Provenir,902,Sí,APROBADO
+Courtney,Jackson,2020-11-28,812-707-3270,624851220,qfrye@example.net,NULL,No,Sí,Minsalud,Sí,Sí,Sí,Sí,Costa de Marfil,no aplica,no aplica,68,1983-03-30,Old Mutual,264,Sí,RECHAZADO
+Richard,Glover,2019-08-16,6974277516,378289660,curtis26@example.org,2022-07-27,Sí,No,Mininterior,No,Sí,No,No,Colombia,CACAHUAL,LA PEÑA,25,1980-10-18,Colfondos,347,Sí,RECHAZADO
+Christopher,Sampson,2017-07-24,766.253.9077x85978,9219979372,kinganthony@example.org,2019-11-28,Sí,No,Minsalud,Sí,Sí,Sí,Sí,Finlandia,no aplica,no aplica,35,1991-10-13,Old Mutual,276,Sí,RECHAZADO
+Timothy,Shannon,2004-11-04,3184419523,1480095117,wbradley@example.com,2019-12-10,No,Sí,Armada,Sí,No,No,Sí,Bosnia y Herzegovina,no aplica,no aplica,45,1964-05-24,Colfondos,151,No,APROBADO
+William,Martinez,2006-09-19,294-442-8404,7979650518,georgegeorge@example.com,2021-12-24,No,No,N/A,No,Sí,No,No,Colombia,SANTA SOFIA,GUAVATA,57,1981-02-20,Old Mutual,857,No,RECHAZADO
+Judy,Padilla,2023-01-06,001-657-289-5744x30116,7938315951,ayalapaul@example.org,2020-04-22,Sí,No,Inpec,Sí,No,No,No,Colombia,TURMEQUE,CIRCASIA,41,2003-07-03,Protección,242,Sí,RECHAZADO
+Michael,Boyd,2024-10-19,922.554.9898,6588314975,colemanjesse@example.org,2022-06-09,No,No,Armada,Sí,Sí,Sí,No,Colombia,LA PAZ,ENCISO,23,1974-12-29,Provenir,859,No,EMBARGADO
+Lawrence,Weber,2009-01-09,594-492-5002,486459644,hcook@example.org,2022-09-05,No,No,Mininterior,Sí,Sí,Sí,No,República del Congo,no aplica,no aplica,46,1998-03-15,N/A,364,No,RECHAZADO
+Megan,Carpenter,2002-03-22,3093462370,6810511588,terrellkeith@example.com,NULL,No,No,Inpec,No,Sí,No,No,Macedônia,no aplica,no aplica,43,1955-05-27,Protección,329,Sí,APROBADO
+Johnny,Young,2010-11-12,908-936-1539x943,2121620333,brianrivera@example.net,NULL,Sí,No,N/A,No,No,Sí,Sí,Colombia,RIVERA,RIOHACHA,34,1995-08-23,Provenir,1034,No,RECHAZADO
+Kathy,Scott,2001-01-27,827.467.3611,7063656366,nwarren@example.com,2020-03-01,Sí,No,Inpec,No,No,No,Sí,Colombia,CASABIANCA,PACHO,27,1973-01-24,Protección,205,No,RECHAZADO
+Thomas,Cook,2003-10-31,+1-339-555-2013x61938,4794798687,josephballard@example.com,2023-06-17,No,Sí,Armada,Sí,No,No,Sí,Colombia,OCAÑA,CALI,37,1982-05-03,Protección,463,Sí,APROBADO
+Frank,Franklin,2010-09-01,+1-429-776-8325x72752,8456898676,alexandertucker@example.com,2023-08-19,Sí,Sí,N/A,No,Sí,Sí,No,Colombia,San Pedro de los Milagros,Girardota,66,1975-06-21,Old Mutual,404,Sí,RECHAZADO
+Brandon,Obrien,2019-11-11,425-965-5001,6100209851,kristalopez@example.com,NULL,Sí,Sí,Mininterior,No,Sí,Sí,No,Colombia,FUQUENE,REPELON,25,1970-01-09,Protección,772,No,RECHAZADO
+Glenn,Foster,2017-08-01,484-480-4682x04906,9011926234,cgeorge@example.net,NULL,No,No,Minsalud,Sí,Sí,No,No,Colombia,SALAMINA,SUAREZ,60,2006-09-27,Old Mutual,290,No,RECHAZADO
+Jill,Clarke,2004-01-20,794-597-8632x920,5194568354,michaelrowe@example.org,NULL,Sí,Sí,Armada,No,No,Sí,No,Colombia,TUNJA,Antioquia,54,1990-08-21,Provenir,693,No,RECHAZADO
+Justin,Lawrence,2023-10-06,(367)806-6465,632808587,lawrencecampbell@example.com,2022-03-21,No,Sí,Minsalud,No,Sí,No,No,Colombia,CARURU,CAJAMARCA,26,1965-10-17,Protección,1185,No,APROBADO
+Bethany,Bailey,2009-01-08,502.375.7236x931,8289859065,ymitchell@example.net,2021-09-01,Sí,Sí,Inpec,Sí,No,Sí,No,Colombia,LA VICTORIA,EL ROBLE,39,1956-06-09,Protección,737,Sí,RECHAZADO
+Michelle,Marquez,2018-09-01,709.329.5163,9295955836,erinsantiago@example.net,NULL,Sí,No,N/A,No,Sí,Sí,No,Colombia,SAN PABLO,BARRANCA DE UPIA,42,1965-08-17,Colfondos,787,Sí,RECHAZADO
+Rachel,Hall,2009-04-22,(339)566-9084x5743,4730106570,ashley10@example.net,NULL,No,No,Mininterior,Sí,No,No,Sí,Colombia,SAN FELIPE,CHIVOR,40,1992-02-02,N/A,645,Sí,APROBADO
+Jennifer,Flores,2008-02-17,001-712-313-7832,583399089,campbelljason@example.com,2020-07-27,Sí,No,Mininterior,No,No,No,No,Colombia,San Vicente,PINILLOS,33,1977-07-09,Old Mutual,863,Sí,RECHAZADO
+Wendy,Collins,2021-10-21,250-634-4059x508,1410821097,scottdavis@example.org,2020-01-02,No,No,Armada,No,No,Sí,Sí,Colombia,CARMEN DEL DARIEN,TENZA,30,1984-08-07,Protección,218,Sí,APROBADO
+Michael,Caldwell,2024-06-02,944-722-6597x00963,7550791754,carpenterjamie@example.org,NULL,Sí,Sí,Mininterior,No,No,Sí,Sí,Colombia,CHIPAQUE,JURADO,65,1964-12-26,Colfondos,1156,Sí,RECHAZADO
+Angel,Mitchell,2023-02-15,001-432-313-8045x0108,7733835411,elliotttyler@example.org,2024-05-08,Sí,No,Mininterior,No,Sí,No,Sí,Colombia,YACOPI,CALAMAR,64,1999-07-13,Old Mutual,909,No,RECHAZADO
+Colleen,Barry,2016-04-12,001-418-590-3873,2714370497,stacy84@example.org,NULL,Sí,No,Policía,No,Sí,No,Sí,Colombia,GRANADA,SAN ANDRES,51,1999-12-21,Old Mutual,431,No,RECHAZADO
+Jonathan,Cantu,2009-09-12,001-595-385-3165x83328,7830502892,robertoboyer@example.com,NULL,Sí,No,Inpec,No,Sí,No,No,Colombia,PALESTINA,Fredonia,54,1966-10-07,Protección,223,Sí,RECHAZADO
+Gregory,Miller,2012-12-11,001-934-382-5270x3213,2401671354,autumnflores@example.net,NULL,No,Sí,Armada,Sí,Sí,No,Sí,Colombia,FACATATIVA,PUERRES,19,1966-07-06,Protección,118,No,APROBADO
+Jay,Knox,2003-01-03,9985487661,8032581911,eparker@example.net,2021-02-08,No,No,Inpec,No,No,No,No,Colombia,GUAPOTA,AGUA DE DIOS,24,1954-10-03,Provenir,617,Sí,APROBADO
+Melissa,Oliver,2010-05-26,(840)926-5780,2099976680,jessicavargas@example.net,NULL,No,No,Minsalud,Sí,Sí,No,No,Colombia,BAJO BAUDO,CAMPOHERMOSO,44,1957-04-13,Old Mutual,669,Sí,EMBARGADO
+Veronica,Decker,2005-04-12,001-938-993-8094x32465,5505098594,chaselee@example.com,2023-07-14,No,No,Mininterior,Sí,Sí,Sí,Sí,Colombia,JAMUNDI,CALI,41,1993-01-26,Provenir,253,No,RECHAZADO
+Edward,Ramsey,2012-08-26,001-962-914-9612,1449104865,diamond13@example.net,NULL,Sí,Sí,Armada,Sí,No,Sí,Sí,Colombia,POPAYAN,RONDON,70,1955-11-25,Protección,806,No,RECHAZADO
+Kelli,Jackson,2021-03-09,001-816-253-8883,3286232236,haleytracy@example.com,NULL,No,Sí,Policía,No,Sí,Sí,No,Colombia,MIRITI - PARANA,RIOBLANCO,61,1997-06-25,Old Mutual,171,No,APROBADO
+Melissa,Kennedy,2018-09-16,001-818-936-4434,6537057007,rachelnicholson@example.net,NULL,No,No,Minsalud,No,Sí,No,No,Colombia,BALBOA,GUACHETA,36,1954-02-14,N/A,1168,No,RECHAZADO
+Cindy,Smith,2016-03-16,897-539-0519,9048687549,ginadouglas@example.com,2023-08-11,Sí,No,Mininterior,Sí,Sí,No,Sí,Colombia,LA CHORRERA,Murind�,68,1979-07-16,Colfondos,307,No,RECHAZADO
+Jason,Acosta,2018-06-15,520-827-3969x021,6596826407,greg06@example.net,2019-12-24,Sí,No,Inpec,Sí,Sí,No,Sí,Colombia,Salgar,SAN ANTERO,53,1961-02-23,Protección,945,Sí,RECHAZADO
+Melissa,Hernandez,2014-10-01,001-689-954-2959,8167753395,yhansen@example.org,NULL,No,No,Mininterior,Sí,No,No,Sí,Colombia,San Jer�nimo,SANTA SOFIA,69,1988-03-30,Protección,355,Sí,RECHAZADO
+Jennifer,Everett,2006-11-24,001-744-427-0654x427,3850276258,jonathanjackson@example.com,NULL,Sí,No,Policía,No,No,Sí,Sí,Argelia,no aplica,no aplica,20,1999-03-22,N/A,401,No,RECHAZADO
+Dawn,Webb,2023-09-10,393.448.9347x5891,4840308711,solisjason@example.net,NULL,No,No,Inpec,Sí,No,No,No,Colombia,JERUSALEN,MANATI,19,1958-12-29,Colfondos,868,Sí,EMBARGADO
+Brianna,Turner,2007-11-30,001-745-842-9489x050,9144741247,dhart@example.com,NULL,No,Sí,Minsalud,No,Sí,No,Sí,Mónaco,no aplica,no aplica,26,1976-01-24,Old Mutual,269,No,APROBADO
+Kevin,Ramirez,2021-09-18,268-995-1587,6323530253,loretta11@example.com,NULL,No,No,Minsalud,Sí,Sí,No,Sí,Colombia,RIO VIEJO,VALLE DEL GUAMUEZ,18,1956-03-23,Protección,1094,Sí,EMBARGADO
+Evan,Scott,2005-02-18,(301)401-7391,4101077655,larsensusan@example.net,2023-12-23,Sí,No,Inpec,Sí,No,Sí,No,Colombia,EL BANCO,ARANZAZU,46,1970-06-09,Old Mutual,717,No,RECHAZADO
+Allison,Ford,2006-12-16,674.370.0159x4214,6883565988,chendevon@example.org,NULL,Sí,No,Armada,No,Sí,Sí,Sí,Colombia,CERRITO,PORE,26,1961-08-28,Protección,542,No,RECHAZADO
+Jacqueline,Johnston,2004-07-12,+1-304-540-6691x91594,9358765447,michelle21@example.net,2020-05-27,No,Sí,Armada,No,No,Sí,No,Colombia,MANTA,BARBACOAS,39,2006-03-20,Provenir,1171,Sí,APROBADO
+John,Smith,2013-01-08,639-587-5109x24913,9566211778,johnsonrandy@example.org,NULL,Sí,Sí,Mininterior,Sí,No,Sí,No,Colombia,CHIPAQUE,SANTA BARBARA,41,1995-07-31,Colfondos,50,No,RECHAZADO
+James,Bernard,2016-10-24,891.715.4349x738,7030641704,croberts@example.net,NULL,Sí,Sí,Policía,Sí,Sí,No,Sí,Colombia,Granada,MESETAS,18,1971-07-10,Protección,375,No,RECHAZADO
+William,Russell,2001-05-08,920-418-6982,1344183049,annarobertson@example.com,2024-01-19,No,Sí,Minsalud,Sí,Sí,No,No,Colombia,CUMBAL,VILLAVICENCIO,66,1990-10-25,N/A,522,No,RECHAZADO
+Jamie,Santana,2023-12-07,783.278.2865x3676,9135721804,urichardson@example.net,2020-06-13,No,Sí,Mininterior,Sí,Sí,No,No,Colombia,RONCESVALLES,CAPITANEJO,23,1959-06-14,Provenir,799,No,RECHAZADO
+Kathryn,Williams,2005-07-03,274-313-9819x175,8083531153,zjohnson@example.net,2023-10-07,No,No,Mininterior,No,No,Sí,Sí,Colombia,ALDANA,EL CHARCO,66,1981-07-14,Provenir,333,Sí,RECHAZADO
+Cynthia,Gonzales,2023-04-30,644.902.1360x3685,5927961408,kevinanderson@example.org,NULL,No,No,Armada,Sí,Sí,No,No,Colombia,MONGUI,COELLO,31,2003-04-14,Provenir,776,Sí,APROBADO
+Eric,Robinson,2012-02-05,(579)816-4823x673,1637171899,rachel83@example.net,NULL,Sí,Sí,Armada,No,No,Sí,Sí,Colombia,LA PEÑA,LA MERCED,37,1957-05-13,Protección,861,No,RECHAZADO
+Stacy,Davis,2006-06-08,+1-914-734-5433,9559797584,rileyjacqueline@example.org,NULL,No,No,Minsalud,Sí,Sí,Sí,No,Colombia,PALMITO,SUTAMARCHAN,46,1984-02-04,Protección,970,No,EMBARGADO
+Elizabeth,Montgomery,2009-02-22,4094456044,9240851182,amy66@example.com,NULL,Sí,Sí,N/A,No,No,No,No,Colombia,PUERTO ASIS,GUATEQUE,29,2001-12-25,Old Mutual,547,No,RECHAZADO
+Christopher,Watson,2014-06-17,685.709.5813x8583,6863685660,katherine91@example.com,NULL,Sí,Sí,Inpec,No,Sí,Sí,No,Islas Malvinas,no aplica,no aplica,66,1973-07-01,N/A,1050,Sí,RECHAZADO
+Tanya,Knight,2023-02-12,442.910.8140x700,4665917361,storres@example.net,NULL,Sí,Sí,Mininterior,No,No,Sí,Sí,Omán,no aplica,no aplica,23,1972-11-08,Protección,262,Sí,RECHAZADO
+Pamela,Snyder,2008-05-21,714.204.7680x516,1523765854,andrew61@example.org,2024-05-17,No,No,Armada,Sí,No,Sí,Sí,Colombia,MORELIA,C�ceres,27,1994-09-03,Provenir,397,No,RECHAZADO
+Cynthia,Smith,2004-12-31,8109676236,1129166830,smckinney@example.com,NULL,Sí,No,Minsalud,No,Sí,Sí,No,Colombia,SORA,SABANALARGA,19,1971-04-10,N/A,227,Sí,RECHAZADO
+Robert,Grant,2000-05-25,(971)867-2270,4613062863,ubriggs@example.net,2023-11-06,No,No,Policía,No,Sí,Sí,No,Colombia,RIO IRO,BELALCAZAR,21,1958-08-03,Old Mutual,479,Sí,EMBARGADO
+Amber,Hogan,2013-05-28,+1-712-513-7002,5000453467,jason63@example.net,2023-04-19,No,Sí,Inpec,Sí,Sí,Sí,No,Colombia,POPAYAN,DAGUA,28,1972-08-24,Colfondos,202,Sí,APROBADO
+Joseph,Pittman,2021-07-28,938-618-2865x922,5697573246,wsanchez@example.com,NULL,Sí,Sí,Mininterior,No,No,No,Sí,Colombia,ZIPAQUIRA,PUERTO ESCONDIDO,44,1995-11-24,Provenir,509,Sí,RECHAZADO
+Daniel,Burns,2004-09-28,+1-766-600-9480x9042,1142802886,wchristensen@example.com,2020-11-15,No,Sí,Armada,No,No,No,No,Colombia,GARZON,Frontino,50,2002-01-27,Old Mutual,733,Sí,APROBADO
+Stephanie,Cobb,2006-07-02,821.872.5124x91434,7894974709,fbell@example.org,NULL,No,No,Inpec,No,Sí,No,Sí,Colombia,FALAN,Titirib�,26,1978-08-14,N/A,1105,Sí,APROBADO
+Ian,Ford,2007-09-26,434-694-3516,3226047730,dukebeth@example.org,NULL,No,Sí,Minsalud,No,Sí,No,Sí,Colombia,CHACHAGsI,SIPI,65,2004-12-17,N/A,1140,Sí,APROBADO
+Gloria,Mcconnell,2024-05-22,+1-270-791-5180x166,2353211341,charles84@example.com,NULL,Sí,Sí,Armada,No,Sí,No,Sí,Colombia,BOCHALEMA,CHIPATA,63,1971-10-06,Protección,89,No,RECHAZADO
+Gene,Allen,2023-02-01,3103598858,7021864160,aaron47@example.org,NULL,Sí,No,N/A,No,Sí,Sí,Sí,Colombia,EL RETORNO,SAN PEDRO,69,1983-08-30,Colfondos,763,No,RECHAZADO
+Russell,Palmer,2022-10-24,739.333.8866x6799,3035617117,colecharles@example.org,2023-10-07,Sí,Sí,Minsalud,Sí,No,Sí,Sí,Colombia,CABUYARO,CERINZA,57,1969-04-29,Provenir,1082,No,RECHAZADO
+Gary,Greene,2011-12-17,206.633.9417,4421458864,madeline15@example.org,2023-07-22,No,Sí,Mininterior,Sí,No,Sí,No,Colombia,CUITIVA,Nech�,57,1997-09-24,Colfondos,14,No,RECHAZADO
+Gregory,Green,2013-09-14,541-462-5402x3840,7320082360,ipena@example.net,2020-01-15,Sí,No,Inpec,Sí,Sí,No,No,Corea del Sur,no aplica,no aplica,65,1966-05-26,Provenir,592,Sí,RECHAZADO
+Javier,Salazar,2017-03-06,(978)458-4625x3895,3281937848,taylormichele@example.net,2021-10-20,No,No,Armada,Sí,Sí,Sí,No,Colombia,CHIA,PLANADAS,31,1987-07-22,N/A,71,No,RECHAZADO
+Sylvia,Alvarez,2018-03-06,(590)285-9797,9950222624,ymartin@example.com,NULL,Sí,No,Inpec,Sí,Sí,Sí,No,Territorio Británico del Océano Índico,no aplica,no aplica,20,1977-06-02,Old Mutual,535,No,RECHAZADO
+Erin,Dodson,2000-01-27,(535)233-3405x4178,2864212307,rogersgabrielle@example.net,2023-07-21,No,Sí,Minsalud,No,Sí,Sí,Sí,Colombia,BARRANCABERMEJA,ARCABUCO,69,2001-04-16,N/A,576,Sí,APROBADO
+Emily,Young,2009-05-14,(230)714-2326,6104932482,markfleming@example.net,2020-09-28,No,Sí,Inpec,No,No,No,Sí,Colombia,SANTA ROSA,FUENTE DE ORO,55,1959-03-18,N/A,564,No,APROBADO
+Gary,Mcneil,2022-03-26,(967)756-8623x9717,6505855662,smithalan@example.org,2021-07-18,Sí,Sí,N/A,Sí,Sí,Sí,No,Colombia,PUERTO ESCONDIDO,CHIVATA,35,1970-08-20,N/A,472,Sí,RECHAZADO
+Catherine,Jones,2020-07-29,448-876-0120x61010,8667343519,megan73@example.net,NULL,Sí,No,Inpec,Sí,Sí,Sí,Sí,Colombia,Murind�,SUAREZ,32,1992-09-24,N/A,744,Sí,RECHAZADO
+Tracy,Hamilton,2003-03-15,001-619-824-1257x223,9191537026,corey55@example.org,2021-08-07,No,Sí,Inpec,Sí,Sí,Sí,Sí,Colombia,GRANADA,BUENOS AIRES,31,1981-09-29,Provenir,277,Sí,APROBADO
+Ryan,Davila,2001-06-09,223-365-9262x37503,9549809615,rkelly@example.com,NULL,Sí,Sí,N/A,Sí,No,No,No,Colombia,BARRANCO DE LOBA,VILLAGOMEZ,54,1970-08-13,Colfondos,170,No,RECHAZADO
+Steven,White,2002-08-06,559-246-9478,6207360327,alvarezrobert@example.com,NULL,No,No,Armada,No,Sí,No,Sí,Colombia,SAN DIEGO,Angostura,49,1963-05-18,N/A,454,No,RECHAZADO
+Justin,Pearson,2016-12-29,419-456-1895x7164,7816828506,rogertaylor@example.net,2022-04-04,Sí,No,Policía,No,Sí,No,No,Colombia,MARIPI,MEDIO ATRATO,24,1966-06-03,N/A,563,Sí,RECHAZADO
+William,Wiggins,2002-03-26,(939)892-4571x32544,776799570,micheal08@example.net,NULL,Sí,No,Armada,No,Sí,No,No,Colombia,AGUADAS,EL PEÑON,64,1999-11-12,N/A,738,No,RECHAZADO
+Rebecca,Morgan,2023-10-05,510-486-1708x2670,707145674,robertbryant@example.net,NULL,Sí,No,Inpec,Sí,Sí,No,No,Colombia,SANTIAGO,GUADUAS,39,1971-10-26,Colfondos,544,Sí,RECHAZADO
+Dominic,Powell,2010-03-02,(240)793-3226x4272,6873274712,alan89@example.com,NULL,No,Sí,Inpec,No,Sí,Sí,Sí,Colombia,VILLAMARIA,INIRIDA,69,1979-05-18,Colfondos,281,Sí,APROBADO
+Ryan,Snyder,2013-11-25,(438)238-7564,4205309853,susanbradford@example.net,2023-06-29,Sí,Sí,Armada,No,No,Sí,Sí,Colombia,SILOS,FUNDACION,19,1972-06-13,Provenir,707,No,RECHAZADO
+Darlene,Klein,2016-07-15,512.255.6163x080,7023396866,edward91@example.com,NULL,No,No,Policía,No,Sí,Sí,No,Surinám,no aplica,no aplica,33,1981-03-01,Protección,427,No,RECHAZADO

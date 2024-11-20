@@ -1,0 +1,101 @@
+Nombre,Apellido,Fecha,Celular,ID,Correo,ListaNegra,PrePensionado,InstitucionPublica,NombreInstitucion,ObservacionesDisciplinarias,TieneFamiliaPolicia,TieneHijosInpec,Condecoracion,PaisNacimiento,CiudadNacimiento,CiudadResidencia,Edad,FechaNacimiento,FondoPension,SemanasCotizadas,FondoExtranjero,Caracterizacion
+Miguel,Hernández,1962-03-27,3005291955,771179679,miguel.hernández@example.com,Sí,Sí,Sí,ICBF,No,Sí,Sí,No,Colombia,Barranquilla,Bogotá,62,1962-02-06,Colpensiones,78,No,RECHAZADO
+Ana,Pérez,1990-03-28,3002756603,268574008,ana.pérez@example.com,Sí,No,No,Mininterior,Sí,No,Sí,No,Colombia,Cali,Cartagena,26,1998-02-23,FondoPrivado,12,No,RECHAZADO
+María,Hernández,2021-08-11,3007133077,580361133,maría.hernández@example.com,No,Sí,No,Mininterior,No,No,No,No,Colombia,Medellín,Barranquilla,41,1983-01-14,FondoPrivado,748,No,RECHAZADO
+Juan,López,1966-01-17,3003839986,777508940,juan.lópez@example.com,Sí,No,No,ICBF,No,No,Sí,Sí,Colombia,Cartagena,Cartagena,30,1994-02-27,FondoPrivado,138,No,RECHAZADO
+Juan,Ramírez,2014-09-08,3008724793,976302125,juan.ramírez@example.com,Sí,Sí,No,Mininterior,No,Sí,No,No,Colombia,Barranquilla,Barranquilla,30,1994-11-07,Colpensiones,46,No,RECHAZADO
+María,Martínez,2005-04-22,3004937109,887125452,maría.martínez@example.com,No,Sí,No,Ministerio de Educación,No,Sí,Sí,Sí,Colombia,Bucaramanga,Barranquilla,41,1983-03-26,Provenir,401,Sí,RECHAZADO
+Juan,López,1993-01-03,3001629402,753168732,juan.lópez@example.com,No,Sí,No,Secretaría de Salud,No,Sí,No,Sí,Colombia,Medellín,Bogotá,27,1997-08-12,Colpensiones,245,No,RECHAZADO
+Carlos,Gómez,1984-09-08,3004427612,153380114,carlos.gómez@example.com,Sí,No,Sí,Mininterior,No,Sí,No,Sí,Colombia,Bucaramanga,Medellín,70,1954-11-21,Provenir,66,Sí,RECHAZADO
+Ana,Rodríguez,1977-05-05,3009267685,438644510,ana.rodríguez@example.com,No,Sí,Sí,Ministerio de Educación,No,No,Sí,Sí,Colombia,Medellín,Medellín,63,1961-02-17,Colpensiones,542,No,RECHAZADO
+Ana,López,2003-01-10,3007391520,347459523,ana.lópez@example.com,Sí,No,Sí,Mininterior,No,Sí,Sí,Sí,Colombia,Barranquilla,Barranquilla,25,1999-05-12,Provenir,464,No,RECHAZADO
+Sofía,Hernández,2006-09-25,3001290791,618847371,sofía.hernández@example.com,Sí,Sí,No,ICBF,Sí,Sí,No,No,Colombia,Cartagena,Bogotá,59,1965-12-11,Provenir,347,Sí,RECHAZADO
+Juan,Gómez,1954-11-02,3005103347,993165723,juan.gómez@example.com,No,Sí,No,Ministerio de Educación,No,No,Sí,No,Colombia,Bogotá,Bogotá,75,1949-01-26,FondoPrivado,667,No,RECHAZADO
+Camila,Rodríguez,1979-05-15,3006630184,744698669,camila.rodríguez@example.com,No,Sí,No,ICBF,Sí,Sí,Sí,Sí,Colombia,Bucaramanga,Cali,21,2003-03-03,Provenir,742,No,RECHAZADO
+Carlos,García,1969-04-28,3003684674,426909364,carlos.garcía@example.com,No,No,No,Mininterior,Sí,Sí,Sí,No,Colombia,Medellín,Barranquilla,53,1971-05-25,Provenir,181,No,APROBADO
+Sofía,García,1994-11-23,3004858882,448136718,sofía.garcía@example.com,Sí,Sí,Sí,Mininterior,No,Sí,Sí,No,Colombia,Cali,Medellín,45,1979-11-17,FondoPrivado,691,Sí,RECHAZADO
+Sofía,Ramírez,1971-11-27,3004233534,278862997,sofía.ramírez@example.com,Sí,No,No,Ministerio de Educación,No,Sí,Sí,Sí,Colombia,Bucaramanga,Cali,40,1984-09-03,FondoPrivado,716,Sí,RECHAZADO
+María,Pérez,2004-10-26,3003931321,991896442,maría.pérez@example.com,Sí,No,No,Secretaría de Salud,No,Sí,Sí,Sí,Colombia,Medellín,Barranquilla,55,1969-07-22,Provenir,361,Sí,RECHAZADO
+Sofía,López,1950-07-10,3004218339,744152591,sofía.lópez@example.com,No,Sí,Sí,Ministerio de Educación,Sí,No,Sí,Sí,Colombia,Barranquilla,Medellín,72,1952-11-24,Colpensiones,593,Sí,RECHAZADO
+Ana,Rodríguez,2017-08-20,3004448411,722542553,ana.rodríguez@example.com,No,Sí,No,Ministerio de Educación,No,No,No,Sí,Colombia,Cartagena,Cartagena,77,1947-05-11,FondoPrivado,538,No,RECHAZADO
+Ana,Hernández,2001-07-03,3007666744,289004283,ana.hernández@example.com,Sí,Sí,Sí,Mininterior,No,Sí,Sí,Sí,Colombia,Cali,Cali,19,2005-01-11,FondoPrivado,478,Sí,RECHAZADO
+Camila,Martínez,1955-02-25,3008253307,971918438,camila.martínez@example.com,Sí,No,Sí,Ministerio de Educación,No,No,No,No,Colombia,Bucaramanga,Cali,62,1962-09-27,FondoPrivado,542,No,RECHAZADO
+Carlos,Gómez,2001-03-01,3001027151,288856375,carlos.gómez@example.com,Sí,No,Sí,Secretaría de Salud,Sí,No,No,No,Colombia,Bogotá,Bucaramanga,77,1947-02-21,FondoPrivado,452,No,RECHAZADO
+Miguel,Gómez,2003-11-12,3002661163,195712742,miguel.gómez@example.com,Sí,Sí,Sí,Ministerio de Educación,No,Sí,No,Sí,Colombia,Cartagena,Medellín,42,1982-09-08,Colpensiones,710,Sí,RECHAZADO
+Juan,Pérez,1953-08-17,3004203744,162389776,juan.pérez@example.com,No,Sí,No,ICBF,Sí,Sí,No,No,Colombia,Bogotá,Bogotá,40,1984-06-02,Provenir,57,No,RECHAZADO
+Juan,Hernández,1957-11-06,3003041785,176808513,juan.hernández@example.com,No,Sí,Sí,Ministerio de Educación,Sí,Sí,No,Sí,Colombia,Medellín,Bogotá,57,1967-06-22,FondoPrivado,449,Sí,RECHAZADO
+Carlos,Rodríguez,1995-09-13,3008659941,731810176,carlos.rodríguez@example.com,No,Sí,No,Mininterior,Sí,Sí,No,No,Colombia,Medellín,Medellín,54,1970-12-07,Provenir,743,Sí,RECHAZADO
+Miguel,Gómez,1971-09-28,3008753375,936422709,miguel.gómez@example.com,Sí,Sí,No,ICBF,Sí,No,No,No,Colombia,Cali,Bucaramanga,23,2001-06-11,FondoPrivado,485,Sí,RECHAZADO
+Carlos,Pérez,1981-07-11,3001919904,927420622,carlos.pérez@example.com,Sí,No,No,Ministerio de Educación,Sí,Sí,No,Sí,Colombia,Medellín,Bucaramanga,54,1970-12-18,Colpensiones,424,No,RECHAZADO
+María,Ramírez,1963-03-20,3004100343,414748609,maría.ramírez@example.com,No,Sí,Sí,Ministerio de Educación,No,Sí,No,No,Colombia,Cartagena,Cali,28,1996-12-15,Provenir,637,No,RECHAZADO
+Miguel,García,1973-05-14,3002397187,864652823,miguel.garcía@example.com,Sí,Sí,Sí,Secretaría de Salud,No,Sí,Sí,No,Colombia,Cali,Cartagena,67,1957-07-09,Colpensiones,453,Sí,RECHAZADO
+Camila,Martínez,1972-08-26,3009648680,257958507,camila.martínez@example.com,No,No,Sí,Secretaría de Salud,Sí,Sí,No,Sí,Colombia,Bucaramanga,Cali,39,1985-04-22,Provenir,413,Sí,APROBADO
+Carlos,Gómez,1974-04-02,3004311416,585462046,carlos.gómez@example.com,No,Sí,Sí,Secretaría de Salud,No,No,Sí,No,Colombia,Medellín,Bogotá,51,1973-04-10,FondoPrivado,607,Sí,RECHAZADO
+Miguel,Martínez,1951-03-01,3003840738,466646446,miguel.martínez@example.com,No,Sí,Sí,Secretaría de Salud,Sí,No,Sí,Sí,Colombia,Cali,Bucaramanga,34,1990-01-14,FondoPrivado,706,Sí,RECHAZADO
+Juan,Rodríguez,1972-09-28,3006805572,117759020,juan.rodríguez@example.com,Sí,Sí,No,ICBF,No,No,No,Sí,Colombia,Bucaramanga,Barranquilla,34,1990-10-22,Colpensiones,722,No,RECHAZADO
+Sofía,Hernández,1961-04-21,3006748243,365128916,sofía.hernández@example.com,Sí,No,No,Ministerio de Educación,No,No,Sí,No,Colombia,Cali,Bucaramanga,51,1973-09-04,FondoPrivado,596,Sí,RECHAZADO
+Carlos,López,1999-01-25,3008861867,281801663,carlos.lópez@example.com,Sí,No,Sí,ICBF,Sí,No,Sí,Sí,Colombia,Cali,Bucaramanga,40,1984-03-03,FondoPrivado,354,Sí,RECHAZADO
+Sofía,Pérez,2001-05-28,3004892800,108156860,sofía.pérez@example.com,No,Sí,No,ICBF,Sí,Sí,No,Sí,Colombia,Bogotá,Bogotá,30,1994-06-16,Provenir,742,Sí,RECHAZADO
+Luis,García,1961-09-03,3008228455,586367455,luis.garcía@example.com,Sí,Sí,Sí,ICBF,Sí,Sí,Sí,No,Colombia,Barranquilla,Bogotá,35,1989-05-03,Colpensiones,171,No,RECHAZADO
+Ana,Rodríguez,1980-06-13,3008773141,947521297,ana.rodríguez@example.com,Sí,No,No,Ministerio de Educación,No,Sí,No,Sí,Colombia,Barranquilla,Cali,32,1992-04-19,Colpensiones,607,Sí,RECHAZADO
+Ana,Rodríguez,1971-09-10,3003122370,636933007,ana.rodríguez@example.com,No,Sí,No,Ministerio de Educación,Sí,Sí,No,No,Colombia,Cartagena,Barranquilla,56,1968-04-12,Provenir,546,No,RECHAZADO
+Miguel,Hernández,2017-05-24,3007209102,102564407,miguel.hernández@example.com,Sí,Sí,No,Secretaría de Salud,Sí,Sí,No,No,Colombia,Bucaramanga,Cartagena,45,1979-04-21,Provenir,352,No,RECHAZADO
+Luis,Pérez,2001-09-23,3005470561,346504105,luis.pérez@example.com,Sí,Sí,Sí,Secretaría de Salud,Sí,Sí,Sí,Sí,Colombia,Cali,Barranquilla,45,1979-10-13,Colpensiones,564,No,RECHAZADO
+María,Rodríguez,1965-05-21,3006548942,835527433,maría.rodríguez@example.com,No,No,Sí,Secretaría de Salud,Sí,No,Sí,Sí,Colombia,Cartagena,Bogotá,26,1998-08-21,Colpensiones,683,Sí,APROBADO
+Sofía,Pérez,1960-04-08,3004045660,171297198,sofía.pérez@example.com,Sí,No,No,ICBF,Sí,No,No,Sí,Colombia,Cali,Bucaramanga,32,1992-03-24,FondoPrivado,339,Sí,RECHAZADO
+Sofía,Hernández,1988-09-03,3006438413,379260364,sofía.hernández@example.com,Sí,Sí,No,Ministerio de Educación,No,Sí,No,Sí,Colombia,Barranquilla,Bucaramanga,37,1987-10-05,Colpensiones,447,No,RECHAZADO
+Carlos,Rodríguez,1985-05-07,3009529225,999825990,carlos.rodríguez@example.com,No,No,Sí,ICBF,No,No,Sí,Sí,Colombia,Medellín,Medellín,23,2001-06-11,FondoPrivado,771,Sí,APROBADO
+María,Hernández,1962-10-02,3001639361,825133980,maría.hernández@example.com,Sí,Sí,No,Secretaría de Salud,No,Sí,Sí,No,Colombia,Cali,Medellín,35,1989-06-01,FondoPrivado,354,Sí,RECHAZADO
+Camila,Martínez,2015-10-21,3007143472,558196499,camila.martínez@example.com,No,No,No,Ministerio de Educación,No,Sí,Sí,Sí,Colombia,Cali,Barranquilla,49,1975-04-19,Colpensiones,391,No,APROBADO
+Ana,García,1985-07-27,3007058354,380069710,ana.garcía@example.com,No,Sí,Sí,Ministerio de Educación,Sí,Sí,Sí,No,Colombia,Medellín,Cali,50,1974-09-10,Provenir,110,No,RECHAZADO
+Juan,Pérez,2001-09-17,3002004354,482892757,juan.pérez@example.com,Sí,Sí,No,ICBF,Sí,Sí,No,No,Colombia,Medellín,Bogotá,28,1996-09-10,FondoPrivado,341,Sí,RECHAZADO
+Luis,Hernández,2004-07-27,3009623299,480672218,luis.hernández@example.com,Sí,No,No,Ministerio de Educación,No,No,Sí,Sí,Colombia,Cali,Medellín,23,2001-11-18,FondoPrivado,795,Sí,RECHAZADO
+Juan,García,2013-10-26,3006188901,398767517,juan.garcía@example.com,Sí,No,Sí,Secretaría de Salud,No,Sí,Sí,Sí,Colombia,Barranquilla,Bogotá,76,1948-01-27,FondoPrivado,171,Sí,RECHAZADO
+Camila,López,1957-06-27,3005376355,619333987,camila.lópez@example.com,No,No,No,Secretaría de Salud,No,Sí,Sí,Sí,Colombia,Cali,Barranquilla,27,1997-07-18,FondoPrivado,639,Sí,APROBADO
+Miguel,Gómez,2010-09-10,3001370450,866481691,miguel.gómez@example.com,No,Sí,No,ICBF,Sí,No,Sí,Sí,Colombia,Medellín,Bogotá,52,1972-01-01,Provenir,711,No,RECHAZADO
+Luis,Rodríguez,1953-08-05,3007983581,969357206,luis.rodríguez@example.com,No,Sí,Sí,Secretaría de Salud,Sí,Sí,No,No,Colombia,Bucaramanga,Cali,26,1998-05-18,FondoPrivado,209,No,RECHAZADO
+Ana,López,2008-01-22,3009049109,363769450,ana.lópez@example.com,Sí,No,Sí,Secretaría de Salud,Sí,No,No,No,Colombia,Cartagena,Cartagena,28,1996-01-14,Colpensiones,715,No,RECHAZADO
+Camila,Hernández,2003-05-24,3009903213,862782995,camila.hernández@example.com,Sí,No,Sí,Secretaría de Salud,No,No,Sí,Sí,Colombia,Cali,Cartagena,54,1970-10-23,Provenir,39,No,RECHAZADO
+María,Martínez,1984-04-12,3001751628,327350708,maría.martínez@example.com,No,No,Sí,ICBF,No,No,No,Sí,Colombia,Cali,Cartagena,75,1949-12-24,Colpensiones,68,Sí,RECHAZADO
+María,Rodríguez,1982-01-07,3001317100,799709584,maría.rodríguez@example.com,Sí,No,No,Ministerio de Educación,Sí,Sí,Sí,Sí,Colombia,Barranquilla,Bogotá,19,2005-03-04,Colpensiones,231,No,RECHAZADO
+Sofía,López,2001-11-06,3003435522,977195286,sofía.lópez@example.com,No,No,Sí,Ministerio de Educación,Sí,No,No,Sí,Colombia,Cali,Cartagena,48,1976-11-22,Colpensiones,479,No,RECHAZADO
+Miguel,Pérez,2009-11-12,3003547245,587563297,miguel.pérez@example.com,No,No,No,ICBF,No,No,No,No,Colombia,Barranquilla,Bogotá,52,1972-06-10,Colpensiones,101,No,APROBADO
+Miguel,López,1955-03-09,3009305155,592518225,miguel.lópez@example.com,No,Sí,Sí,Mininterior,Sí,No,Sí,No,Colombia,Bucaramanga,Cartagena,77,1947-05-18,Provenir,161,No,RECHAZADO
+Camila,López,1962-12-08,3009535117,592646677,camila.lópez@example.com,No,Sí,Sí,Mininterior,Sí,No,No,No,Colombia,Cali,Medellín,72,1952-07-04,Colpensiones,48,No,RECHAZADO
+Luis,Martínez,1988-01-01,3003642566,393761376,luis.martínez@example.com,Sí,No,Sí,Ministerio de Educación,No,No,Sí,Sí,Colombia,Medellín,Bucaramanga,22,2002-06-08,Provenir,561,No,RECHAZADO
+María,López,1950-01-16,3005996165,480671195,maría.lópez@example.com,Sí,Sí,Sí,Ministerio de Educación,No,No,No,No,Colombia,Medellín,Bucaramanga,63,1961-01-19,Provenir,605,No,RECHAZADO
+Sofía,Ramírez,1989-07-25,3004840776,352091975,sofía.ramírez@example.com,Sí,Sí,No,Ministerio de Educación,Sí,Sí,Sí,No,Colombia,Medellín,Cartagena,41,1983-07-16,FondoPrivado,622,Sí,RECHAZADO
+Carlos,Ramírez,1988-03-09,3007516414,106032156,carlos.ramírez@example.com,No,No,Sí,Ministerio de Educación,Sí,Sí,Sí,Sí,Colombia,Bogotá,Bogotá,27,1997-11-12,FondoPrivado,66,No,APROBADO
+Carlos,Pérez,2023-10-01,3004908983,959029705,carlos.pérez@example.com,No,No,No,Ministerio de Educación,Sí,No,Sí,No,Colombia,Barranquilla,Bucaramanga,48,1976-04-27,Colpensiones,71,No,APROBADO
+Luis,Rodríguez,1976-07-26,3003712636,972766605,luis.rodríguez@example.com,No,No,No,Ministerio de Educación,Sí,No,No,No,Colombia,Medellín,Cartagena,37,1987-01-12,Provenir,248,Sí,APROBADO
+Camila,Gómez,1950-11-10,3005627655,962043383,camila.gómez@example.com,No,No,Sí,ICBF,No,No,No,No,Colombia,Barranquilla,Medellín,40,1984-03-04,FondoPrivado,718,Sí,APROBADO
+Miguel,Pérez,2002-05-26,3004248022,148949768,miguel.pérez@example.com,Sí,Sí,Sí,Mininterior,Sí,No,Sí,Sí,Colombia,Barranquilla,Bogotá,75,1949-06-10,Colpensiones,411,No,RECHAZADO
+Luis,López,1953-11-21,3005066656,396806633,luis.lópez@example.com,No,No,Sí,Mininterior,Sí,No,Sí,Sí,Colombia,Bogotá,Barranquilla,57,1967-02-08,Provenir,184,Sí,RECHAZADO
+María,Martínez,1998-09-15,3003950833,375759955,maría.martínez@example.com,Sí,No,No,Secretaría de Salud,Sí,No,Sí,No,Colombia,Cartagena,Cartagena,20,2004-03-26,Provenir,263,No,RECHAZADO
+Miguel,Ramírez,1958-04-07,3005382938,585714562,miguel.ramírez@example.com,No,Sí,No,Secretaría de Salud,Sí,Sí,No,No,Colombia,Cali,Bogotá,71,1953-05-12,FondoPrivado,442,No,RECHAZADO
+Carlos,Ramírez,1964-03-22,3009671241,806028254,carlos.ramírez@example.com,Sí,No,No,ICBF,Sí,Sí,No,No,Colombia,Cartagena,Bogotá,75,1949-01-22,Colpensiones,91,No,RECHAZADO
+Juan,Pérez,2000-04-28,3001185088,618153775,juan.pérez@example.com,No,No,Sí,ICBF,Sí,No,Sí,Sí,Colombia,Cali,Medellín,74,1950-07-05,Colpensiones,558,No,RECHAZADO
+Miguel,Ramírez,1989-12-07,3001768617,843926659,miguel.ramírez@example.com,Sí,Sí,No,Ministerio de Educación,Sí,Sí,No,Sí,Colombia,Bucaramanga,Medellín,52,1972-01-24,Colpensiones,410,Sí,RECHAZADO
+Miguel,Gómez,1957-12-13,3004417422,375014016,miguel.gómez@example.com,Sí,Sí,Sí,Mininterior,No,Sí,Sí,Sí,Colombia,Cartagena,Cartagena,30,1994-10-23,Provenir,360,Sí,RECHAZADO
+Ana,Rodríguez,1959-05-08,3002935751,776552574,ana.rodríguez@example.com,Sí,No,No,Ministerio de Educación,Sí,Sí,Sí,Sí,Colombia,Cali,Barranquilla,22,2002-06-05,FondoPrivado,702,Sí,RECHAZADO
+Carlos,Rodríguez,1957-02-27,3006786539,293262313,carlos.rodríguez@example.com,Sí,Sí,Sí,Secretaría de Salud,Sí,Sí,No,No,Colombia,Bucaramanga,Medellín,32,1992-11-01,Colpensiones,156,Sí,RECHAZADO
+Ana,García,1952-04-15,3006609943,415369903,ana.garcía@example.com,Sí,Sí,Sí,Mininterior,Sí,No,No,No,Colombia,Bogotá,Cali,48,1976-11-12,Colpensiones,762,No,RECHAZADO
+Miguel,López,1985-05-23,3003897030,585974107,miguel.lópez@example.com,No,Sí,Sí,Secretaría de Salud,Sí,No,Sí,No,Colombia,Bogotá,Bucaramanga,28,1996-08-25,Colpensiones,604,Sí,RECHAZADO
+Miguel,Pérez,2005-12-26,3002990026,948471657,miguel.pérez@example.com,Sí,Sí,Sí,Ministerio de Educación,No,Sí,Sí,Sí,Colombia,Cali,Cartagena,45,1979-01-06,Colpensiones,441,No,RECHAZADO
+Miguel,Pérez,1997-10-18,3002712480,809946173,miguel.pérez@example.com,Sí,Sí,No,Ministerio de Educación,No,No,Sí,Sí,Colombia,Bogotá,Bogotá,56,1968-09-07,FondoPrivado,215,Sí,RECHAZADO
+María,Rodríguez,1982-05-27,3007352882,146366300,maría.rodríguez@example.com,No,No,No,Mininterior,Sí,Sí,Sí,Sí,Colombia,Bucaramanga,Cartagena,66,1958-07-18,FondoPrivado,304,No,RECHAZADO
+Sofía,Hernández,1973-08-08,3007456774,881263212,sofía.hernández@example.com,Sí,Sí,Sí,Mininterior,No,Sí,No,Sí,Colombia,Cali,Cali,72,1952-10-17,Provenir,80,Sí,RECHAZADO
+Miguel,Hernández,2013-11-03,3008930260,941117751,miguel.hernández@example.com,No,Sí,No,ICBF,Sí,No,No,No,Colombia,Cali,Medellín,25,1999-12-06,Colpensiones,130,No,RECHAZADO
+Miguel,Rodríguez,2001-11-06,3001984486,784966280,miguel.rodríguez@example.com,No,Sí,Sí,ICBF,No,Sí,No,No,Colombia,Bogotá,Medellín,36,1988-03-20,Colpensiones,420,No,RECHAZADO
+Luis,Gómez,1965-07-19,3005837489,331001929,luis.gómez@example.com,Sí,No,Sí,Mininterior,Sí,Sí,Sí,No,Colombia,Cartagena,Barranquilla,32,1992-09-03,FondoPrivado,685,Sí,RECHAZADO
+Luis,Ramírez,1953-01-17,3004133518,790803761,luis.ramírez@example.com,Sí,Sí,Sí,ICBF,No,Sí,No,No,Colombia,Barranquilla,Cartagena,44,1980-03-13,Colpensiones,44,Sí,RECHAZADO
+Luis,Martínez,1985-11-14,3008629519,394115966,luis.martínez@example.com,Sí,No,No,Ministerio de Educación,Sí,No,No,No,Colombia,Medellín,Barranquilla,56,1968-01-10,Colpensiones,547,No,RECHAZADO
+Sofía,Gómez,2012-05-21,3003251109,369254915,sofía.gómez@example.com,Sí,No,No,Ministerio de Educación,No,No,No,Sí,Colombia,Bogotá,Cartagena,75,1949-05-12,FondoPrivado,506,Sí,RECHAZADO
+Miguel,García,1999-06-24,3008483139,829044229,miguel.garcía@example.com,Sí,No,Sí,Ministerio de Educación,Sí,No,No,No,Colombia,Bucaramanga,Cali,47,1977-03-10,Provenir,573,Sí,RECHAZADO
+Luis,Hernández,1961-06-06,3009650419,558074242,luis.hernández@example.com,No,No,No,ICBF,Sí,Sí,No,Sí,Colombia,Cartagena,Cartagena,30,1994-04-17,Colpensiones,102,Sí,APROBADO
+Ana,Hernández,2000-12-07,3005471468,952692707,ana.hernández@example.com,No,Sí,Sí,ICBF,No,Sí,No,Sí,Colombia,Bucaramanga,Bucaramanga,41,1983-06-21,FondoPrivado,558,Sí,RECHAZADO
+Carlos,Gómez,1962-05-24,3005577419,114314309,carlos.gómez@example.com,No,No,No,Ministerio de Educación,Sí,Sí,Sí,No,Colombia,Barranquilla,Medellín,30,1994-01-27,Provenir,568,Sí,APROBADO
+Miguel,Ramírez,1965-08-22,3008476115,365792475,miguel.ramírez@example.com,No,Sí,No,Secretaría de Salud,Sí,Sí,Sí,No,Colombia,Medellín,Cartagena,74,1950-03-20,Provenir,131,Sí,RECHAZADO
+Carlos,Pérez,1984-03-21,3003056711,982731127,carlos.pérez@example.com,No,No,No,Ministerio de Educación,Sí,Sí,Sí,Sí,Colombia,Bucaramanga,Cartagena,75,1949-12-16,Provenir,754,No,RECHAZADO
+Juan,López,1960-02-28,3002310063,497425199,juan.lópez@example.com,No,Sí,No,Ministerio de Educación,No,No,Sí,Sí,Colombia,Cartagena,Cartagena,68,1956-05-19,Provenir,66,Sí,RECHAZADO
+María,García,2004-05-16,3006753004,592103732,maría.garcía@example.com,No,No,No,Mininterior,Sí,No,No,Sí,Colombia,Cartagena,Medellín,77,1947-02-01,FondoPrivado,790,Sí,RECHAZADO
