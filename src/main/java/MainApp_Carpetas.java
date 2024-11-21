@@ -6,10 +6,13 @@ import com.unquindisoft.colpensionex.util.VerificarCiudad;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainApp_Carpetas {
     public static void main(String[] args) throws IOException {
-        String carpetaCSV = "src/main/resources/SolicitudesEnProcesamiento/Prueba 1/";  // Ruta de la carpeta
+        String carpetaCSV = "src/main/resources/SolicitudesEnProcesamiento/Prueba peque/";  // Ruta de la carpeta
         String rutaCiudades = "src/main/resources/BaseDeDatos/paises/colombia/municipio.csv";
         String separador = ",";
 
@@ -25,60 +28,70 @@ public class MainApp_Carpetas {
         // Crear el verificador de ciudad
         VerificarCiudad verificador = new VerificarCiudad(rutaCiudades);
 
-        // Procesar cada archivo CSV
+        // Crear un pool de hilos para procesar los archivos
+        ExecutorService executor = Executors.newFixedThreadPool(4); // Ajusta el tamaño del pool según tu CPU
+        AtomicInteger contadorProcesados = new AtomicInteger(0);
+
         for (File archivoCSV : archivosCSV) {
-            System.out.println("Procesando archivo: " + archivoCSV.getName());
+            executor.execute(() -> {
+                try {
+                    System.out.println("Procesando archivo: " + archivoCSV.getName());
 
-            // Verificar el número de columnas en el archivo CSV
-            int cantidadColumnas = ArchivoUtil.verificarColumnasCSV(archivoCSV.getAbsolutePath());
-            if (cantidadColumnas != 23) {
-                System.out.println("Error: El archivo " + archivoCSV.getName() + " tiene un número incorrecto de columnas.");
-                continue;  // Continuar con el siguiente archivo si el número de columnas es incorrecto
-            }
+                    // Verificar el número de columnas en el archivo CSV
+                    int cantidadColumnas = ArchivoUtil.verificarColumnasCSV(archivoCSV.getAbsolutePath());
+                    if (cantidadColumnas != 23) {
+                        System.out.println("Error: El archivo " + archivoCSV.getName() + " tiene un número incorrecto de columnas.");
+                        return;
+                    }
 
-            // Leer personas desde el archivo CSV
-            CSVReader lectorCSV = new CSVReader(archivoCSV.getAbsolutePath(), separador);
-            List<Persona> personas = lectorCSV.leerArchivo();
+                    // Leer personas desde el archivo CSV
+                    CSVReader lectorCSV = new CSVReader(archivoCSV.getAbsolutePath(), separador);
+                    List<Persona> personas = lectorCSV.leerArchivo();
 
-            // Verificar el formato de las fechas en el archivo CSV
-            boolean fechasCorrectas = true;
-            for (Persona persona : personas) {
-                String fecha = persona.getFecha();
-                if (!ArchivoUtil.verificarFecha(fecha)) {
-                    fechasCorrectas = false;
-                    break;
+                    // Verificar el formato de las fechas en el archivo CSV
+                    boolean fechasCorrectas = true;
+                    for (Persona persona : personas) {
+                        String fecha = persona.getFecha();
+                        if (!ArchivoUtil.verificarFecha(fecha)) {
+                            fechasCorrectas = false;
+                            break;
+                        }
+                    }
+
+                    if (!fechasCorrectas) {
+                        System.out.println("Error: Alguna de las fechas en " + archivoCSV.getName() + " tiene un formato incorrecto.");
+                        return;
+                    }
+
+                    // Procesar cada persona
+                    for (Persona persona : personas) {
+                        System.out.println("Persona: " + persona.getNombre() + " " + persona.getApellido());
+                        System.out.println("Lista Negra: " + persona.getListaNegra());
+                        System.out.println("Caracterización inicial: " + persona.getCaracterizacion());
+
+                        verificador.verificarCiudad(persona);
+                        persona.evaluarCaracterizacion();
+
+                        System.out.println("Caracterización evaluada: " + persona.getCaracterizacion());
+                        actualizarCaracterizacionCSV(archivoCSV.getAbsolutePath(), persona);
+                    }
+
+                    // Guardar las personas aprobadas en un archivo CSV
+                    String rutaAprobados = "src/main/resources/SolicitudesEnProcesamiento/aprobados.csv";
+                    ArchivoUtil.guardarAprobados(personas, rutaAprobados);
+
+                    // Incrementar el contador de archivos procesados
+                    int procesados = contadorProcesados.incrementAndGet();
+                    System.out.println("Archivos procesados hasta el momento: " + procesados);
+
+                } catch (IOException e) {
+                    System.err.println("Error al procesar el archivo: " + archivoCSV.getName() + " - " + e.getMessage());
                 }
-            }
-
-            if (!fechasCorrectas) {
-                System.out.println("Error: Alguna de las fechas en " + archivoCSV.getName() + " tiene un formato incorrecto.");
-                continue;  // Continuar con el siguiente archivo si alguna fecha es incorrecta
-            }
-
-            // Procesar cada persona
-            for (Persona persona : personas) {
-                // Imprimir la caracterización inicial
-                System.out.println("Persona: " + persona.getNombre() + " " + persona.getApellido());
-                System.out.println("Lista Negra: " + persona.getListaNegra());  // Ahora listaNegra es un String
-                System.out.println("Caracterización inicial: " + persona.getCaracterizacion());
-
-                // Verificar la ciudad
-                verificador.verificarCiudad(persona);
-
-                // Evaluar la caracterización
-                persona.evaluarCaracterizacion();
-
-                // Imprimir la caracterización final después de la evaluación
-                System.out.println("Caracterización evaluada: " + persona.getCaracterizacion());
-
-                // Actualizar el archivo CSV con la nueva caracterización
-                actualizarCaracterizacionCSV(archivoCSV.getAbsolutePath(), persona);
-            }
-
-            // Guardar las personas aprobadas en un archivo CSV
-            String rutaAprobados = "src/main/resources/SolicitudesEnProcesamiento/aprobados.csv";
-            ArchivoUtil.guardarAprobados(personas, rutaAprobados);  // Guardar los aprobados
+            });
         }
+
+        // Apagar el executor cuando termine todo el procesamiento
+        executor.shutdown();
     }
 
     public static void actualizarCaracterizacionCSV(String rutaCSV, Persona persona) throws IOException {

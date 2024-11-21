@@ -305,24 +305,55 @@ public class  ArchivoUtil {
     }
 
     public static void guardarAprobados(List<Persona> personas, String rutaArchivo) {
-        try (FileWriter writer = new FileWriter(rutaArchivo)) {
-            // Escribir encabezado
-            writer.append("Nombre,Apellido,Edad,Caracterizacion\n");
+        try {
+            // Leer contenido existente si el archivo ya existe
+            List<String> lineasExistentes = new ArrayList<>();
+            File archivo = new File(rutaArchivo);
 
-            // Filtrar y escribir personas aprobadas
+            if (archivo.exists()) {
+                try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
+                    String linea;
+                    while ((linea = reader.readLine()) != null) {
+                        lineasExistentes.add(linea);
+                    }
+                }
+            }
+
+            // Crear una lista para las nuevas líneas a escribir
+            List<String> nuevasLineas = new ArrayList<>();
+
+            // Agregar encabezado si el archivo está vacío
+            if (lineasExistentes.isEmpty()) {
+                nuevasLineas.add("Nombre,Apellido,Edad,Caracterizacion");
+            }
+
+            // Filtrar personas aprobadas y evitar duplicados
             for (Persona persona : personas) {
                 persona.evaluarCaracterizacion(); // Evaluar la caracterización
                 if (persona.getCaracterizacion() == Caracterizacion.APROBADO) {
-                    writer.append(persona.getNombre()).append(",")
-                            .append(persona.getApellido()).append(",")
-                            .append(String.valueOf(persona.getEdad())).append(",")
-                            .append(persona.getCaracterizacion().toString()).append("\n");
+                    String lineaPersona = persona.getNombre() + "," + persona.getApellido() + ","
+                            + persona.getEdad() + "," + persona.getCaracterizacion();
+
+                    // Solo agregar si no está ya en las líneas existentes
+                    if (!lineasExistentes.contains(lineaPersona)) {
+                        nuevasLineas.add(lineaPersona);
+                    }
                 }
             }
-            System.out.println("Archivo generado exitosamente: " + rutaArchivo);
+
+            // Escribir las líneas existentes y las nuevas
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo, true))) {
+                for (String nuevaLinea : nuevasLineas) {
+                    writer.write(nuevaLinea);
+                    writer.newLine();
+                }
+            }
+
+            System.out.println("Archivo actualizado exitosamente: " + rutaArchivo);
         } catch (IOException e) {
             System.err.println("Error al guardar los aprobados: " + e.getMessage());
         }
     }
+
 
 }

@@ -14,7 +14,7 @@ public class Persona {
     private String celular;
     private String id;
     private String correo;
-    private String listaNegra;  // Ahora es un String con la fecha de inclusión o null
+    private String listaNegra;
     private boolean prePensionado;
     private boolean institucionPublica;
     private String nombreInstitucion;
