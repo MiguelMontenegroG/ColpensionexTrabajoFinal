@@ -1,4 +1,5 @@
 import com.unquindisoft.colpensionex.model.Cotizante;
+import com.unquindisoft.colpensionex.model.CotizanteManager;
 import com.unquindisoft.colpensionex.util.ArchivoUtil;
 import com.unquindisoft.colpensionex.util.CSVReader;
 import com.unquindisoft.colpensionex.util.VerificarCiudad;
@@ -65,6 +66,8 @@ public class MainApp_Carpetas {
                         System.out.println("Error: Alguna de las fechas en " + archivoCSV.getName() + " tiene un formato incorrecto.");
                         return;
                     }
+
+                    CotizanteManager.procesarCotizantes(personas, archivoCSV.getAbsolutePath());
 
                     // Procesar cada persona
                     for (Cotizante persona : personas) {
