@@ -1,6 +1,6 @@
 package com.unquindisoft.colpensionex.util;
 
-import com.unquindisoft.colpensionex.model.Persona;
+import com.unquindisoft.colpensionex.model.Cotizante;
 import com.unquindisoft.colpensionex.model.Caracterizacion;
 
 import java.io.BufferedReader;
@@ -21,8 +21,8 @@ public class CSVReader {
     }
 
     // Método para leer el archivo CSV y convertirlo en una lista de objetos Persona
-    public List<Persona> leerArchivo() {
-        List<Persona> personas = new ArrayList<>();
+    public List<Cotizante> leerArchivo() {
+        List<Cotizante> personas = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
             // Leer línea por línea
@@ -64,7 +64,7 @@ public class CSVReader {
                 Caracterizacion caracterizacion = Caracterizacion.valueOf(valores[22].toUpperCase());
 
                 // Crear el objeto Persona y añadirlo a la lista
-                Persona persona = new Persona(nombre, apellido, fecha, celular, id, correo, listaNegra, prePensionado, institucionPublica,
+                Cotizante persona = new Cotizante(nombre, apellido, fecha, celular, id, correo, listaNegra, prePensionado, institucionPublica,
                         nombreInstitucion, observacionesDisciplinarias, tieneFamiliaPolicia, tieneHijosInpec, condecoracion,
                         paisNacimiento, ciudadNacimiento, ciudadResidencia, edad, fechaNacimiento, fondoPension, semanasCotizadas,
                         fondoExtranjero, caracterizacion);

@@ -1,14 +1,17 @@
-import com.unquindisoft.colpensionex.model.Persona;
+import com.unquindisoft.colpensionex.model.Cotizante;
 import com.unquindisoft.colpensionex.util.ArchivoUtil;
 import com.unquindisoft.colpensionex.util.CSVReader;
 import com.unquindisoft.colpensionex.util.VerificarCiudad;
+import com.unquindisoft.colpensionex.util.ProcesadorCotizantes;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.PriorityQueue;
 
 public class MainApp_Carpetas {
     public static void main(String[] args) throws IOException {
@@ -46,11 +49,11 @@ public class MainApp_Carpetas {
 
                     // Leer personas desde el archivo CSV
                     CSVReader lectorCSV = new CSVReader(archivoCSV.getAbsolutePath(), separador);
-                    List<Persona> personas = lectorCSV.leerArchivo();
+                    List<Cotizante> personas = lectorCSV.leerArchivo();
 
                     // Verificar el formato de las fechas en el archivo CSV
                     boolean fechasCorrectas = true;
-                    for (Persona persona : personas) {
+                    for (Cotizante persona : personas) {
                         String fecha = persona.getFecha();
                         if (!ArchivoUtil.verificarFecha(fecha)) {
                             fechasCorrectas = false;
@@ -64,7 +67,7 @@ public class MainApp_Carpetas {
                     }
 
                     // Procesar cada persona
-                    for (Persona persona : personas) {
+                    for (Cotizante persona : personas) {
                         System.out.println("Persona: " + persona.getNombre() + " " + persona.getApellido());
                         System.out.println("Lista Negra: " + persona.getListaNegra());
                         System.out.println("Caracterización inicial: " + persona.getCaracterizacion());
@@ -76,13 +79,23 @@ public class MainApp_Carpetas {
                         actualizarCaracterizacionCSV(archivoCSV.getAbsolutePath(), persona);
                     }
 
-                    // Guardar las personas aprobadas en un archivo CSV
+                    // Guardar las personas aprobadas en una PriorityQueue con la función de ProcesadorCotizantes
                     String rutaAprobados = "src/main/resources/SolicitudesEnProcesamiento/aprobados.csv";
-                    ArchivoUtil.guardarAprobados(personas, rutaAprobados);
+                    PriorityQueue<Cotizante> colaAprobados = ProcesadorCotizantes.guardarAprobadosConPrioridad(personas, rutaAprobados);
+
+                    // Guardar la PriorityQueue en un archivo CSV
+                    guardarPriorityQueueEnCSV(colaAprobados, rutaAprobados);
 
                     // Incrementar el contador de archivos procesados
                     int procesados = contadorProcesados.incrementAndGet();
                     System.out.println("Archivos procesados hasta el momento: " + procesados);
+
+                    // Mostrar los cotizantes aprobados ordenados
+                    System.out.println("Cotizantes aprobados y ordenados:");
+                    while (!colaAprobados.isEmpty()) {
+                        Cotizante cotizante = colaAprobados.poll();
+                        System.out.println(cotizante.getNombre() + " " + cotizante.getApellido() + ", Edad: " + cotizante.getEdad());
+                    }
 
                 } catch (IOException e) {
                     System.err.println("Error al procesar el archivo: " + archivoCSV.getName() + " - " + e.getMessage());
@@ -94,7 +107,7 @@ public class MainApp_Carpetas {
         executor.shutdown();
     }
 
-    public static void actualizarCaracterizacionCSV(String rutaCSV, Persona persona) throws IOException {
+    public static void actualizarCaracterizacionCSV(String rutaCSV, Cotizante persona) throws IOException {
         // Leer el archivo CSV
         List<String> lineas = ArchivoUtil.leerArchivoBufferedReader(rutaCSV);
 
@@ -112,6 +125,23 @@ public class MainApp_Carpetas {
         }
 
         // Escribir las líneas actualizadas de nuevo en el archivo
+        ArchivoUtil.escribirArchivoBufferedWriter(rutaCSV, lineas, false);  // false para sobrescribir el archivo
+    }
+
+    public static void guardarPriorityQueueEnCSV(PriorityQueue<Cotizante> colaAprobados, String rutaCSV) throws IOException {
+        // Guardar los cotizantes en el archivo CSV
+        StringBuilder sb = new StringBuilder();
+        while (!colaAprobados.isEmpty()) {
+            Cotizante cotizante = colaAprobados.poll();
+            // Formato de los datos que deseas guardar
+            sb.append(cotizante.getId()).append(",")
+                    .append(cotizante.getNombre()).append(",")
+                    .append(cotizante.getApellido()).append(",")
+                    .append(cotizante.getEdad()).append(",")
+                    .append(cotizante.getCaracterizacion()).append("\n");
+        }
+        List<String> lineas = Arrays.asList(sb.toString().split("\n"));
+        // Escribir los datos en el archivo CSV
         ArchivoUtil.escribirArchivoBufferedWriter(rutaCSV, lineas, false);  // false para sobrescribir el archivo
     }
 }

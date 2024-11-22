@@ -6,7 +6,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 
-public class Persona {
+public class Cotizante {
 
     private String nombre;
     private String apellido;
@@ -33,11 +33,11 @@ public class Persona {
     private Caracterizacion caracterizacion; // Este es un enum, no un booleano
 
     // Constructor
-    public Persona(String nombre, String apellido, String fecha, String celular, String id, String correo,
-                   String listaNegra, boolean prePensionado, boolean institucionPublica, String nombreInstitucion,
-                   boolean observacionesDisciplinarias, boolean tieneFamiliaPolicia, boolean tieneHijosInpec,
-                   boolean condecoracion, String paisNacimiento, String ciudadNacimiento, String ciudadResidencia,
-                   int edad, String fechaNacimiento, String fondoPension, int semanasCotizadas, boolean fondoExtranjero, Caracterizacion caracterizacion) {
+    public Cotizante(String nombre, String apellido, String fecha, String celular, String id, String correo,
+                     String listaNegra, boolean prePensionado, boolean institucionPublica, String nombreInstitucion,
+                     boolean observacionesDisciplinarias, boolean tieneFamiliaPolicia, boolean tieneHijosInpec,
+                     boolean condecoracion, String paisNacimiento, String ciudadNacimiento, String ciudadResidencia,
+                     int edad, String fechaNacimiento, String fondoPension, int semanasCotizadas, boolean fondoExtranjero, Caracterizacion caracterizacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fecha = fecha;

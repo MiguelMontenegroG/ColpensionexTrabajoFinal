@@ -1,5 +1,5 @@
 import com.unquindisoft.colpensionex.util.CSVReader;
-import com.unquindisoft.colpensionex.model.Persona;
+import com.unquindisoft.colpensionex.model.Cotizante;
 import com.unquindisoft.colpensionex.util.VerificarCiudad;
 import com.unquindisoft.colpensionex.util.ArchivoUtil;
 
@@ -24,11 +24,11 @@ public class MainApp_Individual {
         try {
             // Leer personas desde el archivo CSV
             CSVReader lectorCSV = new CSVReader(rutaCSV, separador);
-            List<Persona> personas = lectorCSV.leerArchivo();
+            List<Cotizante> personas = lectorCSV.leerArchivo();
 
             // Verificar el formato de las fechas en el archivo CSV
             boolean fechasCorrectas = true;
-            for (Persona persona : personas) {
+            for (Cotizante persona : personas) {
                 String fecha = persona.getFecha();
                 if (!ArchivoUtil.verificarFecha(fecha)) {
                     fechasCorrectas = false;
@@ -45,7 +45,7 @@ public class MainApp_Individual {
             VerificarCiudad verificador = new VerificarCiudad(rutaCiudades);
 
             // Procesar cada persona
-            for (Persona persona : personas) {
+            for (Cotizante persona : personas) {
                 // Imprimir la caracterización inicial
                 System.out.println("Persona: " + persona.getNombre() + " " + persona.getApellido());
                 System.out.println("Lista Negra: " + persona.getListaNegra());  // Ahora listaNegra es un String
@@ -73,7 +73,7 @@ public class MainApp_Individual {
         }
     }
 
-    public static void actualizarCaracterizacionCSV(String rutaCSV, Persona persona) {
+    public static void actualizarCaracterizacionCSV(String rutaCSV, Cotizante persona) {
         try {
             // Leer el archivo CSV
             List<String> lineas = ArchivoUtil.leerArchivoBufferedReader(rutaCSV);

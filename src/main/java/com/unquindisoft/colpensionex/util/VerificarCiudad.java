@@ -1,6 +1,6 @@
 package com.unquindisoft.colpensionex.util;
 
-import com.unquindisoft.colpensionex.model.Persona;
+import com.unquindisoft.colpensionex.model.Cotizante;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -26,7 +26,7 @@ public class VerificarCiudad {
         }
     }
 
-    public void verificarCiudad(Persona persona) {
+    public void verificarCiudad(Cotizante persona) {
         // Validar ciudad de nacimiento para personas de Colombia
         if ("Colombia".equalsIgnoreCase(persona.getPaisNacimiento())) {
             // Normalizar la ciudad de nacimiento

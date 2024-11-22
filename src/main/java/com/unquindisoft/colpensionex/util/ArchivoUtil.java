@@ -1,7 +1,7 @@
 package com.unquindisoft.colpensionex.util;
 
 import com.unquindisoft.colpensionex.model.Caracterizacion;
-import com.unquindisoft.colpensionex.model.Persona;
+import com.unquindisoft.colpensionex.model.Cotizante;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -304,7 +304,7 @@ public class  ArchivoUtil {
         }
     }
 
-    public static void guardarAprobados(List<Persona> personas, String rutaArchivo) {
+    public static void guardarAprobados(List<Cotizante> personas, String rutaArchivo) {
         try {
             // Leer contenido existente si el archivo ya existe
             List<String> lineasExistentes = new ArrayList<>();
@@ -328,7 +328,7 @@ public class  ArchivoUtil {
             }
 
             // Filtrar personas aprobadas y evitar duplicados
-            for (Persona persona : personas) {
+            for (Cotizante persona : personas) {
                 persona.evaluarCaracterizacion(); // Evaluar la caracterización
                 if (persona.getCaracterizacion() == Caracterizacion.APROBADO) {
                     String lineaPersona = persona.getNombre() + "," + persona.getApellido() + ","
