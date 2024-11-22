@@ -9,34 +9,48 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.PriorityQueue;
 
-public class MainApp_Carpetas {
+public class MainApp_Automatico {
+    private static final String CARPETA_CSV = "src/main/resources/SolicitudesEnProcesamiento/ArchivosPorProcesar";
+    private static final String RUTA_CIUDADES = "src/main/resources/BaseDeDatos/paises/colombia/municipio.csv";
+    private static final String SEPARADOR = ",";
+    private static final int MAX_ARCHIVOS = 5; // Número máximo de archivos a procesar cada vez
+
     public static void main(String[] args) throws IOException {
-        String carpetaCSV = "src/main/resources/SolicitudesEnProcesamiento/ArchivosPorProcesar";  // Ruta de la carpeta
-        String rutaCiudades = "src/main/resources/BaseDeDatos/paises/colombia/municipio.csv";
-        String separador = ",";
-
-        // Obtener todos los archivos CSV de la carpeta
-        File folder = new File(carpetaCSV);
-        File[] archivosCSV = folder.listFiles((dir, name) -> name.endsWith(".csv"));
-
-        if (archivosCSV == null || archivosCSV.length == 0) {
-            System.out.println("No se encontraron archivos CSV en la carpeta.");
-            return;
-        }
-
-        // Crear el verificador de ciudad
-        VerificarCiudad verificador = new VerificarCiudad(rutaCiudades);
+        // Crear un verificador de ciudad
+        VerificarCiudad verificador = new VerificarCiudad(RUTA_CIUDADES);
 
         // Crear un pool de hilos para procesar los archivos
         ExecutorService executor = Executors.newFixedThreadPool(4); // Ajusta el tamaño del pool según tu CPU
         AtomicInteger contadorProcesados = new AtomicInteger(0);
 
-        for (File archivoCSV : archivosCSV) {
+        // Crear un scheduler para ejecutar el procesamiento cada 2 minutos
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.scheduleAtFixedRate(() -> procesarArchivos(executor, verificador, contadorProcesados, scheduler), 0, 2, TimeUnit.MINUTES);
+    }
+
+    private static void procesarArchivos(ExecutorService executor, VerificarCiudad verificador, AtomicInteger contadorProcesados, ScheduledExecutorService scheduler) {
+        // Obtener todos los archivos CSV de la carpeta
+        File folder = new File(CARPETA_CSV);
+        File[] archivosCSV = folder.listFiles((dir, name) -> name.endsWith(".csv"));
+
+        if (archivosCSV == null || archivosCSV.length == 0) {
+            System.out.println("No se encontraron archivos CSV en la carpeta.");
+            // Detener el scheduler si no hay archivos
+            scheduler.shutdown();
+            return;
+        }
+
+        // Procesar hasta 5 archivos a la vez
+        int archivosAProcesar = Math.min(archivosCSV.length, MAX_ARCHIVOS);
+        for (int i = 0; i < archivosAProcesar; i++) {
+            File archivoCSV = archivosCSV[i];
             executor.execute(() -> {
                 try {
                     System.out.println("Procesando archivo: " + archivoCSV.getName());
@@ -49,7 +63,7 @@ public class MainApp_Carpetas {
                     }
 
                     // Leer personas desde el archivo CSV
-                    CSVReader lectorCSV = new CSVReader(archivoCSV.getAbsolutePath(), separador);
+                    CSVReader lectorCSV = new CSVReader(archivoCSV.getAbsolutePath(), SEPARADOR);
                     List<Cotizante> personas = lectorCSV.leerArchivo();
 
                     // Verificar el formato de las fechas en el archivo CSV
@@ -105,9 +119,6 @@ public class MainApp_Carpetas {
                 }
             });
         }
-
-        // Apagar el executor cuando termine todo el procesamiento
-        executor.shutdown();
     }
 
     public static void actualizarCaracterizacionCSV(String rutaCSV, Cotizante persona) throws IOException {

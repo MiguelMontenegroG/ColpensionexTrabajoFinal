@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MainApp_Individual {
     public static void main(String[] args) {
-        String rutaCSV = "src/main/resources/SolicitudesEnProcesamiento/Prueba 1/personas3.csv";
+        String rutaCSV = "src/main/resources/SolicitudesEnProcesamiento/ArchivosPorProcesar/personas_2.csv";
         String rutaCiudades = "src/main/resources/BaseDeDatos/paises/colombia/municipio.csv";
         String separador = ",";
 
